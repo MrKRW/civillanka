@@ -85,7 +85,7 @@ p { line-height: 1.75; color: var(--gray-dark); font-weight: 300; }
 .btn-dark.btn-arrow:hover::after { color: var(--white); transform: translateX(4px); }
 
 /* ===========================
-   LEFT VERTICAL NAV
+   LEFT VERTICAL NAV (hero state only)
 =========================== */
 #side-nav {
   position: fixed;
@@ -97,6 +97,7 @@ p { line-height: 1.75; color: var(--gray-dark); font-weight: 300; }
   justify-content: center;
   padding: 0 0 0 32px;
   pointer-events: none;
+  transition: opacity 0.35s var(--ease), transform 0.35s var(--ease);
 }
 #side-nav ul {
   display: flex;
@@ -143,14 +144,15 @@ p { line-height: 1.75; color: var(--gray-dark); font-weight: 300; }
 }
 #side-nav ul li a:hover { color: var(--white); }
 
-/* When page scrolled past hero, darken nav links */
-#side-nav.dark ul li a { color: rgba(0,0,0,0.6); }
-#side-nav.dark ul li.active a { color: var(--black); }
-#side-nav.dark ul li.active::before { background: var(--black); }
-#side-nav.dark ul li a:hover { color: var(--black); }
+/* Hide side-nav when scrolled past hero */
+#side-nav.hidden {
+  opacity: 0;
+  transform: translateX(-20px);
+  pointer-events: none;
+}
 
 /* ===========================
-   TOP BAR (logo + circle btn)
+   TOP BAR — hero state (centered logo)
 =========================== */
 #top-bar {
   position: fixed;
@@ -160,6 +162,11 @@ p { line-height: 1.75; color: var(--gray-dark); font-weight: 300; }
   align-items: flex-start;
   justify-content: center;
   padding: 30px 50px;
+  pointer-events: none;
+  transition: opacity 0.35s var(--ease);
+}
+#top-bar.hidden {
+  opacity: 0;
   pointer-events: none;
 }
 .site-logo {
@@ -171,40 +178,126 @@ p { line-height: 1.75; color: var(--gray-dark); font-weight: 300; }
   transition: color 0.4s;
   line-height: 1;
 }
-.site-logo strong {
-  font-weight: 700;
-}
-.site-logo span {
-  font-weight: 300;
-}
-#top-bar.dark .site-logo { color: var(--black); }
+.site-logo strong { font-weight: 700; }
+.site-logo span   { font-weight: 300; }
 
-/* Circle button top-right */
+/* Circle button — floats over hero, hides when sticky header appears */
 .circle-btn {
   position: fixed;
   top: 26px;
   right: 40px;
-  z-index: 1001;
+  z-index: 1002;
   width: 38px;
   height: 38px;
   border-radius: 50%;
   border: 1.5px solid rgba(255,255,255,0.7);
   background: transparent;
   cursor: pointer;
-  transition: border-color 0.3s, transform 0.3s;
+  transition: border-color 0.3s, transform 0.3s, opacity 0.35s;
   pointer-events: all;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.circle-btn:hover {
-  border-color: var(--white);
-  transform: scale(1.1);
-}
-.circle-btn.dark {
-  border-color: rgba(0,0,0,0.5);
-}
+.circle-btn:hover { border-color: var(--white); transform: scale(1.1); }
+.circle-btn.dark  { border-color: rgba(0,0,0,0.45); }
 .circle-btn.dark:hover { border-color: var(--black); }
+/* Hide floating circle when sticky bar is visible (sticky bar has its own) */
+.circle-btn.hidden { opacity: 0; pointer-events: none; }
+
+/* ===========================
+   STICKY HEADER — scrolled state
+   Layout: [Logo LEFT] [Nav CENTER] [Circle RIGHT]
+=========================== */
+#sticky-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1001;
+  background: var(--white);
+  border-bottom: 1px solid var(--gray-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 60px;
+  /* Hidden by default, slides in on scroll */
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.4s var(--ease), opacity 0.4s var(--ease);
+  pointer-events: none;
+}
+#sticky-header.visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Sticky logo (left) */
+.sticky-logo {
+  font-family: var(--font-h);
+  font-size: 1.1rem;
+  letter-spacing: 0.01em;
+  color: var(--black);
+  line-height: 1;
+  flex-shrink: 0;
+}
+.sticky-logo strong { font-weight: 700; }
+.sticky-logo span   { font-weight: 300; }
+
+/* Sticky nav (center) */
+.sticky-nav {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.sticky-nav li {
+  display: flex;
+  align-items: center;
+}
+/* Pipe before the active item only */
+.sticky-nav li.active::before {
+  content: '|';
+  color: var(--black);
+  font-size: 0.8rem;
+  margin-right: 6px;
+  font-weight: 300;
+  line-height: 1;
+}
+.sticky-nav li a {
+  font-family: var(--font-h);
+  font-size: 0.82rem;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  color: rgba(0,0,0,0.55);
+  padding: 0 20px;
+  transition: color 0.25s var(--ease);
+  text-transform: lowercase;
+  white-space: nowrap;
+}
+.sticky-nav li.active a {
+  color: var(--black);
+  font-weight: 400;
+}
+.sticky-nav li a:hover { color: var(--black); }
+
+/* Sticky circle btn (right) */
+.sticky-circle {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(0,0,0,0.35);
+  background: transparent;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: border-color 0.3s, transform 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sticky-circle:hover { border-color: var(--black); transform: scale(1.1); }
 
 /* ===========================
    HERO SLIDER

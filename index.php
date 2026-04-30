@@ -20,6 +20,29 @@
 <body>
 
 <!-- ============================================================
+     STICKY HEADER (shown on scroll, hidden on hero)
+============================================================ -->
+<header id="sticky-header" role="banner" aria-label="Sticky Navigation">
+  <!-- Logo left -->
+  <a href="index.php" class="sticky-logo" aria-label="FORMA Home">
+    <strong>FORMA</strong><span>Architects</span>
+  </a>
+
+  <!-- Nav center -->
+  <ul class="sticky-nav" role="list">
+    <li class="active"><a href="#hero">home</a></li>
+    <li><a href="#about">about</a></li>
+    <li><a href="#services">services</a></li>
+    <li><a href="#projects">portfolio</a></li>
+    <li><a href="#footer">contact</a></li>
+  </ul>
+
+  <!-- Circle right -->
+  <button class="sticky-circle" id="sticky-circle-btn" aria-label="Open menu">
+  </button>
+</header>
+
+<!-- ============================================================
      MOBILE NAV OVERLAY
 ============================================================ -->
 <nav id="mobile-nav" role="navigation" aria-label="Mobile Navigation">

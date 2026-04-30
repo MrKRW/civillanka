@@ -1,50 +1,73 @@
 // ============================
-// SCROLL STATE: dark nav when past hero
+// ELEMENT REFS
 // ============================
-const sideNav  = document.getElementById('side-nav');
-const topBar   = document.getElementById('top-bar');
-const circleBtn = document.getElementById('circle-menu-btn');
-const hero     = document.getElementById('hero');
+const sideNav      = document.getElementById('side-nav');
+const topBar       = document.getElementById('top-bar');
+const circleBtn    = document.getElementById('circle-menu-btn');
+const stickyHeader = document.getElementById('sticky-header');
+const stickyCirBtn = document.getElementById('sticky-circle-btn');
+const hero         = document.getElementById('hero');
+
+// Section→nav-label mapping (for active highlight)
+const sectionMap = [
+  { id: 'hero',         label: 'home'      },
+  { id: 'about',        label: 'about'     },
+  { id: 'services',     label: 'services'  },
+  { id: 'projects',     label: 'portfolio' },
+  { id: 'footer',       label: 'contact'   },
+];
+
+function getActiveSection() {
+  let current = 'home';
+  sectionMap.forEach(({ id, label }) => {
+    const el = document.getElementById(id);
+    if (el && window.scrollY >= el.offsetTop - 120) current = label;
+  });
+  return current;
+}
+
+function updateNavActive(label) {
+  // side-nav
+  sideNav.querySelectorAll('li').forEach(li => {
+    li.classList.toggle('active', li.querySelector('a').textContent.trim() === label);
+  });
+  // sticky-nav
+  stickyHeader.querySelectorAll('.sticky-nav li').forEach(li => {
+    li.classList.toggle('active', li.querySelector('a').textContent.trim() === label);
+  });
+}
 
 window.addEventListener('scroll', () => {
-  const pastHero = window.scrollY > hero.offsetHeight * 0.85;
-  sideNav.classList.toggle('dark', pastHero);
-  topBar.classList.toggle('dark', pastHero);
-  circleBtn.classList.toggle('dark', pastHero);
+  const pastHero = window.scrollY > hero.offsetHeight * 0.75;
+
+  // Toggle hero-state elements
+  sideNav.classList.toggle('hidden', pastHero);
+  topBar.classList.toggle('hidden', pastHero);
+  circleBtn.classList.toggle('hidden', pastHero);
+
+  // Toggle sticky header
+  stickyHeader.classList.toggle('visible', pastHero);
+
+  // Back-to-top
   backTop.classList.toggle('show', window.scrollY > 400);
 
-  // Highlight active side-nav item
-  const sections = ['hero','about','services','projects','footer'];
-  let current = 'hero';
-  sections.forEach(id => {
-    const el = document.getElementById(id);
-    if (el && window.scrollY >= el.offsetTop - 200) current = id;
-  });
-  const navLinks = { hero: 'home', about: 'about', services: 'services', projects: 'portfolio', footer: 'contact' };
-  sideNav.querySelectorAll('li').forEach(li => {
-    const a = li.querySelector('a');
-    const match = Object.entries(navLinks).find(([,v]) => v === a.textContent.trim());
-    li.classList.toggle('active', match && match[0] === current);
-  });
+  // Active nav item
+  updateNavActive(getActiveSection());
 });
 
 // ============================
-// MOBILE NAV (circle btn opens it)
+// MOBILE NAV (both circle buttons open it)
 // ============================
 const mobileNav    = document.getElementById('mobile-nav');
 const mobileClose  = document.getElementById('mobile-nav-close');
 
-circleBtn.addEventListener('click', () => {
-  mobileNav.classList.add('open');
-  circleBtn.setAttribute('aria-expanded', 'true');
-});
-mobileClose.addEventListener('click', () => {
-  mobileNav.classList.remove('open');
-  circleBtn.setAttribute('aria-expanded', 'false');
-});
-mobileNav.querySelectorAll('a').forEach(a => {
-  a.addEventListener('click', () => mobileNav.classList.remove('open'));
-});
+function openMenu()  { mobileNav.classList.add('open'); }
+function closeMenu() { mobileNav.classList.remove('open'); }
+
+circleBtn.addEventListener('click', openMenu);
+stickyCirBtn.addEventListener('click', openMenu);
+mobileClose.addEventListener('click', closeMenu);
+mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
 
 // ============================
 // BACK TO TOP
