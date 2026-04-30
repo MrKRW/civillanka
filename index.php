@@ -24,32 +24,37 @@
 ============================================================ -->
 <nav id="mobile-nav" role="navigation" aria-label="Mobile Navigation">
   <button id="mobile-nav-close" aria-label="Close menu">&#x2715;</button>
-  <a href="#about">About</a>
-  <a href="#services">Services</a>
-  <a href="#projects">Projects</a>
-  <a href="#testimonials">Journal</a>
-  <a href="#footer">Contact</a>
+  <a href="#about">about</a>
+  <a href="#services">services</a>
+  <a href="#projects">portfolio</a>
+  <a href="#testimonials">journal</a>
+  <a href="#footer">contact</a>
 </nav>
 
 <!-- ============================================================
-     HEADER
+     LEFT VERTICAL NAV
 ============================================================ -->
-<header id="site-header" role="banner">
-  <a href="index.php" class="header-logo" aria-label="FORMA Home">FORMA</a>
+<nav id="side-nav" role="navigation" aria-label="Primary Navigation">
+  <ul>
+    <li class="active"><a href="#hero">home</a></li>
+    <li><a href="#about">about</a></li>
+    <li><a href="#services">services</a></li>
+    <li><a href="#projects">portfolio</a></li>
+    <li><a href="#footer">contact</a></li>
+  </ul>
+</nav>
 
-  <nav class="header-nav" aria-label="Primary Navigation">
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#projects">Projects</a>
-    <a href="#testimonials">Journal</a>
-  </nav>
+<!-- ============================================================
+     TOP BAR: Centered Logo
+============================================================ -->
+<div id="top-bar" aria-label="Site header">
+  <a href="index.php" class="site-logo" aria-label="FORMA Home">
+    <strong>FORMA</strong><span>Architects</span>
+  </a>
+</div>
 
-  <a href="#footer" class="header-cta">Get in Touch</a>
-
-  <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-</header>
+<!-- Circle menu button (top right) -->
+<button class="circle-btn" id="circle-menu-btn" aria-label="Open menu" aria-expanded="false"></button>
 
 <!-- ============================================================
      HERO SECTION
@@ -59,54 +64,45 @@
     <div class="swiper-wrapper">
 
       <!-- Slide 1 -->
-      <div class="swiper-slide hero-slide">
+      <div class="swiper-slide hero-slide"
+           data-title="The Concrete Pavilion"
+           data-cat="Residential">
         <img class="hero-slide-img" src="assets/images/hero_1.png" alt="Minimalist concrete facade architecture" />
         <div class="hero-overlay"></div>
-        <div class="hero-content">
-          <span class="section-label">Architecture &amp; Design</span>
-          <h1>We Build<br />Spaces That<br />Inspire.</h1>
-          <p>Award-winning architectural practice dedicated to creating meaningful, enduring environments.</p>
-          <a href="#projects" class="btn btn-light btn-arrow"><span>Explore Our Work</span></a>
-        </div>
       </div>
 
       <!-- Slide 2 -->
-      <div class="swiper-slide hero-slide">
+      <div class="swiper-slide hero-slide"
+           data-title="Alvar Home &amp; Studio"
+           data-cat="Heritage">
         <img class="hero-slide-img" src="assets/images/hero_2.png" alt="Luxury modern villa with infinity pool" />
         <div class="hero-overlay"></div>
-        <div class="hero-content">
-          <span class="section-label">Residential</span>
-          <h1>Where Form<br />Meets<br />Function.</h1>
-          <p>Bespoke residential designs crafted to reflect the vision and lifestyle of each client.</p>
-          <a href="#projects" class="btn btn-light btn-arrow"><span>View Residences</span></a>
-        </div>
       </div>
 
       <!-- Slide 3 -->
-      <div class="swiper-slide hero-slide">
+      <div class="swiper-slide hero-slide"
+           data-title="Meridian Commercial Tower"
+           data-cat="Commercial">
         <img class="hero-slide-img" src="assets/images/hero_3.png" alt="Contemporary glass commercial building" />
         <div class="hero-overlay"></div>
-        <div class="hero-content">
-          <span class="section-label">Commercial</span>
-          <h1>Defining<br />The Urban<br />Skyline.</h1>
-          <p>Commercial and mixed-use architecture that shapes communities and stands the test of time.</p>
-          <a href="#projects" class="btn btn-light btn-arrow"><span>Commercial Projects</span></a>
-        </div>
       </div>
 
     </div><!-- /swiper-wrapper -->
   </div><!-- /swiper -->
 
-  <!-- Nav arrows -->
-  <button class="hero-prev" aria-label="Previous slide">&#8592;</button>
-  <button class="hero-next" aria-label="Next slide">&#8594;</button>
-
-  <!-- Slide counter -->
-  <div class="hero-counter" aria-hidden="true">
-    <div class="current">01</div>
-    <div class="divider"></div>
-    <div class="total">03</div>
+  <!-- Bottom-right: project caption (updated via JS) -->
+  <div class="hero-caption" aria-live="polite">
+    <div class="hero-caption-title">The Concrete Pavilion</div>
+    <div class="hero-caption-cat">Residential</div>
   </div>
+
+  <!-- Bottom-left: dash pagination -->
+  <div class="hero-pagination" aria-label="Slide navigation">
+    <div class="dash active" data-index="0"></div>
+    <div class="dash" data-index="1"></div>
+    <div class="dash" data-index="2"></div>
+  </div>
+
 </section>
 
 <!-- ============================================================
