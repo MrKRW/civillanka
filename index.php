@@ -356,7 +356,10 @@
 
       <!-- ROW 2 -->
 
-      <!-- Cell 6: Photo — Member 3 -->
+      <!-- Cell 6: Empty offset cell (matches Hiroshi offset layout) -->
+      <div class="team-cell team-empty"></div>
+
+      <!-- Cell 7: Photo — Member 3 -->
       <div class="team-cell team-photo">
         <img src="team%20images/32.png" alt="Architect portrait" />
       </div>
