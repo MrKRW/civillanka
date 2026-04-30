@@ -1687,8 +1687,8 @@ margin-bottom: 2.5rem;
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--black);
-  margin-bottom: 20px;
+  color: #0047FF; /* Hiroshi Blue */
+  margin-bottom: 24px;
 }
 
 .footer-col ul {
@@ -1703,7 +1703,7 @@ margin-bottom: 2.5rem;
 .footer-col ul li a {
   font-family: var(--font-b);
   font-size: 0.92rem;
-  color: var(--accent);
+  color: #000000;
   text-decoration: none;
   transition: opacity 0.25s;
 }
@@ -1722,7 +1722,7 @@ margin-bottom: 2.5rem;
 .footer-col address a {
   font-family: var(--font-b);
   font-size: 0.92rem;
-  color: var(--accent);
+  color: #000000;
   text-decoration: none;
   transition: opacity 0.25s;
 }
@@ -1742,7 +1742,7 @@ margin-bottom: 2.5rem;
   font-size: 0.72rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--gray-mid);
+  color: #999999;
 }
 
 /* Responsive */
