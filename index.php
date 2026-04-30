@@ -30,7 +30,7 @@
   <header id="sticky-header" role="banner" aria-label="Sticky Navigation">
     <!-- Logo left -->
     <a href="index.php" class="sticky-logo" aria-label="Civilanka Home">
-      <strong>Civilanka</strong>Architects
+      <img src="Logos/sharedImage%20-%20Copy.PNG" alt="Civilanka Architects" class="logo-img logo-img--sticky" />
     </a>
 
     <!-- Nav center -->
@@ -77,7 +77,7 @@
 ============================================================ -->
   <div id="top-bar" aria-label="Site header">
     <a href="index.php" class="site-logo" aria-label="Civilanka Home">
-      <strong>Civilanka</strong>Architects
+      <img src="Logos/sharedImage%20-%20Copy.PNG" alt="Civilanka Architects" class="logo-img logo-img--hero" />
     </a>
     <!-- Circle menu button (top right) -->
     <button class="circle-btn" id="circle-menu-btn" aria-label="Open menu" aria-expanded="false"></button>
@@ -89,22 +89,21 @@
   <section id="hero" class="split-view" aria-label="Featured Projects Split View">
     <!-- Left Half -->
     <div class="split-half split-left">
-      <img src="Project%20images/2023-11-07.jpg" class="split-bg" alt="Exterior architecture" />
+      <img src="Project%20images/1%20(4).png" class="split-bg" alt="Exterior architecture" />
       <div class="split-overlay"></div>
       <div class="vert-text vert-left">exterior</div>
     </div>
     
     <!-- Right Half -->
     <div class="split-half split-right">
-      <img src="Project%20images/WhatsApp%20Image%202023-07-17%20at%2021.07.37%20(1).jpeg" class="split-bg filter-dark" alt="Interior design" />
-      <div class="split-overlay dark"></div>
+      <img src="Project%20images/A%20(10).png" class="split-bg" alt="Interior design" />
+      <div class="split-overlay"></div>
       <div class="vert-text vert-right">interior</div>
     </div>
 
-    <!-- Center Logo / Text -->
+    <!-- Center Logo -->
     <div class="center-brand">
-      <div class="brand-letters">CA</div>
-      <div class="brand-sub">STUDIO</div>
+      <img src="Logos/transparent-logo-only.png" alt="Civilanka Logo" class="center-logo-img" />
     </div>
   </section>
 
