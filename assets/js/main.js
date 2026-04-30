@@ -169,6 +169,24 @@ document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .stagger')
   .forEach(el => observer.observe(el));
 
 // ============================
+// TEAM LEFT-SLIDE ANIMATION
+// ============================
+const teamSection = document.getElementById('team');
+if (teamSection) {
+  const teamObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        teamSection.querySelectorAll('.team-cell').forEach(cell => {
+          cell.classList.add('slide-in');
+        });
+        teamObserver.unobserve(teamSection);
+      }
+    });
+  }, { threshold: 0.1 });
+  teamObserver.observe(teamSection);
+}
+
+// ============================
 // COUNTER ANIMATION
 // ============================
 function animateCounter(el) {
