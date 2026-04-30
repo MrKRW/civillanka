@@ -579,7 +579,7 @@
       <div class="cta-inner reveal">
         <h2>Let's Build Something<br />Remarkable Together.</h2>
         <p>Whether a private home or a city block — bring us your vision. We'll shape it into something that lasts.</p>
-        <a href="#footer" class="btn btn-light btn-arrow"><span>Contact us now</span></a>
+        <a href="#footer" class="btn btn-dark btn-arrow"><span>Contact us now</span></a>
       </div>
     </div>
   </section>
