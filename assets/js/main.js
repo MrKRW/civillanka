@@ -12,7 +12,7 @@ const hero         = document.getElementById('hero');
 const sectionMap = [
   { id: 'hero',         label: 'home'      },
   { id: 'about',        label: 'about'     },
-  { id: 'services',     label: 'services'  },
+  { id: 'services',     label: 'pages'     },
   { id: 'projects',     label: 'portfolio' },
   { id: 'footer',       label: 'contact'   },
 ];
@@ -118,17 +118,37 @@ const testSwiper = new Swiper('.test-swiper', {
 });
 
 // ============================
-// SERVICES VERTICAL TABS
+// HORIZONTAL ACCORDION
 // ============================
-const tabItems = document.querySelectorAll('.tab-item');
-const panels   = document.querySelectorAll('.panel-content');
+const accHeaders = document.querySelectorAll('.acc-header');
+const accCloses  = document.querySelectorAll('.acc-close');
 
-tabItems.forEach((tab, i) => {
-  tab.addEventListener('click', () => {
-    tabItems.forEach(t => t.classList.remove('active'));
-    panels.forEach(p => p.classList.remove('active'));
-    tab.classList.add('active');
-    panels[i].classList.add('active');
+accHeaders.forEach(header => {
+  header.addEventListener('click', () => {
+    // Remove active from all items
+    document.querySelectorAll('.acc-item').forEach(item => {
+      item.classList.remove('active');
+      const icon = item.querySelector('.acc-icon');
+      if(icon) icon.innerHTML = '+';
+    });
+    
+    // Add active to clicked item
+    const parentItem = header.parentElement;
+    parentItem.classList.add('active');
+    const activeIcon = parentItem.querySelector('.acc-icon');
+    if(activeIcon) activeIcon.innerHTML = '&minus;';
+  });
+});
+
+accCloses.forEach(closeBtn => {
+  closeBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const parentItem = closeBtn.closest('.acc-item');
+    if (parentItem) {
+      parentItem.classList.remove('active');
+      const icon = parentItem.querySelector('.acc-icon');
+      if(icon) icon.innerHTML = '+';
+    }
   });
 });
 

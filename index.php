@@ -37,7 +37,7 @@
     <ul class="sticky-nav" role="list">
       <li class="active"><a href="#hero">home</a></li>
       <li><a href="#about">about</a></li>
-      <li><a href="#services">services</a></li>
+      <li><a href="#services">pages</a></li>
       <li><a href="#projects">portfolio</a></li>
       <li><a href="#footer">contact</a></li>
     </ul>
@@ -53,7 +53,7 @@
   <nav id="mobile-nav" role="navigation" aria-label="Mobile Navigation">
     <button id="mobile-nav-close" aria-label="Close menu">&#x2715;</button>
     <a href="#about">about</a>
-    <a href="#services">services</a>
+    <a href="#services">pages</a>
     <a href="#projects">portfolio</a>
     <a href="#testimonials">journal</a>
     <a href="#footer">contact</a>
@@ -66,7 +66,7 @@
     <ul>
       <li class="active"><a href="#hero">home</a></li>
       <li><a href="#about">about</a></li>
-      <li><a href="#services">services</a></li>
+      <li><a href="#services">pages</a></li>
       <li><a href="#projects">portfolio</a></li>
       <li><a href="#footer">contact</a></li>
     </ul>
@@ -91,14 +91,14 @@
     <div class="split-half split-left">
       <img src="Project%20images/1%20(4).png" class="split-bg" alt="Exterior architecture" />
       <div class="split-overlay"></div>
-      <div class="vert-text vert-left">exterior</div>
+      <div class="vert-text vert-left">Local</div>
     </div>
-    
+
     <!-- Right Half -->
     <div class="split-half split-right">
       <img src="Project%20images/A%20(10).png" class="split-bg" alt="Interior design" />
       <div class="split-overlay"></div>
-      <div class="vert-text vert-right">interior</div>
+      <div class="vert-text vert-right">International</div>
     </div>
 
     <!-- Center Logo -->
@@ -115,14 +115,15 @@
       <div class="new-about-top">
         <div class="new-about-text reveal-left">
           <span class="new-section-label">&bull; &nbsp;ARCHITECT STUDIO</span>
-          <h2 class="new-about-heading">Architects excited about beauty,<br>affordability sustainability materials<br>for every project and person</h2>
+          <h2 class="new-about-heading">Architects excited about beauty,<br>affordability sustainability
+            materials<br>for every project and person</h2>
           <a href="#" class="new-read-more">read more</a>
         </div>
         <div class="new-about-image reveal-right">
           <img src="Project%20images/2023-11-07.jpg" alt="Architects reviewing blueprints" />
         </div>
       </div>
-      
+
       <div class="new-about-bottom stagger">
         <div class="new-about-links">
           <a href="#">Design a perfect home</a>
@@ -131,109 +132,19 @@
         </div>
         <div class="new-about-col">
           <h3>Urban Exteriors</h3>
-          <p>Purus sit amet vol utpat con sequat mauris nunc congue. Sed id s emper risus in hend rrerit. Facilisi etiam dig nissim diam quis enim. Quis auctor.</p>
+          <p>Purus sit amet vol utpat con sequat mauris nunc congue. Sed id s emper risus in hend rrerit. Facilisi etiam
+            dig nissim diam quis enim. Quis auctor.</p>
         </div>
         <div class="new-about-col">
           <h3>Cityscapes Buildings</h3>
-          <p>Purus sit amet vol utpat con sequat mauris nunc congue. Sed id s emper risus in hend rrerit. Facilisi etiam dig nissim diam quis enim. Quis auctor.</p>
+          <p>Purus sit amet vol utpat con sequat mauris nunc congue. Sed id s emper risus in hend rrerit. Facilisi etiam
+            dig nissim diam quis enim. Quis auctor.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============================================================
-     SERVICES SECTION (VERTICAL TABS)
-============================================================ -->
-  <section id="services" class="section-pad">
-    <div class="container">
-      <div class="services-header reveal">
-        <span class="section-label">What We Do</span>
-        <h2>Our Areas of<br />Expertise</h2>
-      </div>
 
-      <div class="services-grid">
-
-        <!-- Tabs -->
-        <div class="services-tabs" role="tablist" aria-label="Services">
-
-          <div class="tab-item active" role="tab" aria-selected="true" tabindex="0">
-            <span class="tab-num">01</span>
-            <span class="tab-title">Architectural Design</span>
-            <span class="tab-arrow">&#8594;</span>
-          </div>
-
-          <div class="tab-item" role="tab" aria-selected="false" tabindex="0">
-            <span class="tab-num">02</span>
-            <span class="tab-title">Interior Architecture</span>
-            <span class="tab-arrow">&#8594;</span>
-          </div>
-
-          <div class="tab-item" role="tab" aria-selected="false" tabindex="0">
-            <span class="tab-num">03</span>
-            <span class="tab-title">Urban Planning</span>
-            <span class="tab-arrow">&#8594;</span>
-          </div>
-
-          <div class="tab-item" role="tab" aria-selected="false" tabindex="0">
-            <span class="tab-num">04</span>
-            <span class="tab-title">Landscape Design</span>
-            <span class="tab-arrow">&#8594;</span>
-          </div>
-
-        </div>
-
-        <!-- Panels -->
-        <div class="services-panel">
-
-          <div class="panel-content active" role="tabpanel">
-            <div class="panel-img">
-              <img src="assets/images/project_1.png" alt="Architectural Design — Minimalist residential exterior" />
-            </div>
-            <h3>Architectural Design</h3>
-            <p>From concept sketches to construction documentation, we deliver complete architectural services for
-              residential, commercial, and mixed-use developments. Every design is a thoughtful response to its site,
-              client, and culture.</p>
-            <br />
-            <a href="#projects" class="btn btn-dark btn-arrow"><span>See Projects</span></a>
-          </div>
-
-          <div class="panel-content" role="tabpanel">
-            <div class="panel-img">
-              <img src="assets/images/project_2.png" alt="Interior Architecture — Open plan luxury living space" />
-            </div>
-            <h3>Interior Architecture</h3>
-            <p>We design interiors that are a seamless extension of the building itself — where materials, light,
-              proportion, and detail come together to create spaces of genuine comfort and lasting elegance.</p>
-            <br />
-            <a href="#projects" class="btn btn-dark btn-arrow"><span>See Projects</span></a>
-          </div>
-
-          <div class="panel-content" role="tabpanel">
-            <div class="panel-img">
-              <img src="assets/images/hero_3.png" alt="Urban Planning — Contemporary cityscape" />
-            </div>
-            <h3>Urban Planning</h3>
-            <p>We engage with city makers and communities to develop master plans and urban strategies that are
-              forward-thinking yet deeply rooted in local context — designing the neighbourhoods of tomorrow.</p>
-            <br />
-            <a href="#projects" class="btn btn-dark btn-arrow"><span>See Projects</span></a>
-          </div>
-
-          <div class="panel-content" role="tabpanel">
-            <div class="panel-img">
-              <img src="assets/images/hero_1.png" alt="Landscape Design — Exterior environment design" />
-            </div>
-            <h3>Landscape Design</h3>
-            <p>Our landscape team creates outdoor environments that enhance the architecture and enrich the lives of
-              those who inhabit them — from private gardens to large-scale public realm projects.</p>
-            <br />
-            <a href="#projects" class="btn btn-dark btn-arrow"><span>See Projects</span></a>
-          </div>
-
-        </div><!-- /services-panel -->
-      </div><!-- /services-grid -->
-    </div>
-  </section>
 
   <!-- ============================================================
      PROJECTS SECTION (OUR WORK)
@@ -256,7 +167,8 @@
             </div>
             <!-- Slide 2 -->
             <div class="swiper-slide our-work-slide" data-title="Modern Office" data-cat="COMMERCIAL">
-              <img src="Project%20images/WhatsApp%20Image%202023-07-17%20at%2021.07.37%20(1).jpeg" alt="Modern Office" />
+              <img src="Project%20images/WhatsApp%20Image%202023-07-17%20at%2021.07.37%20(1).jpeg"
+                alt="Modern Office" />
             </div>
             <!-- Slide 3 -->
             <div class="swiper-slide our-work-slide" data-title="Minimalist Living" data-cat="RESIDENTIAL">
@@ -272,6 +184,95 @@
     </div>
   </section>
 
+  <!-- ============================================================
+     SERVICES ACCORDION
+============================================================ -->
+  <section id="services" class="accordion-section reveal">
+    <div class="acc-container">
+      
+      <!-- Item 1 -->
+      <div class="acc-item">
+        <div class="acc-header">
+          <span class="acc-icon">+</span>
+          <span class="acc-title">Urban Planning</span>
+        </div>
+        <div class="acc-content">
+          <div class="acc-img-wrap">
+            <img src="Project%20images/2023-11-07.jpg" alt="Urban Planning" />
+          </div>
+          <div class="acc-text-wrap">
+            <span class="acc-close">&minus;</span>
+            <p>Lorem ipsum dolor sit amet, cons ectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+            <a href="#" class="read-more">read more</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="acc-item">
+        <div class="acc-header">
+          <span class="acc-icon">+</span>
+          <span class="acc-title">Exterior</span>
+        </div>
+        <div class="acc-content">
+          <div class="acc-img-wrap">
+            <img src="Project%20images/1%20(4).png" alt="Exterior" />
+          </div>
+          <div class="acc-text-wrap">
+            <span class="acc-close">&minus;</span>
+            <p>Lorem ipsum dolor sit amet, cons ectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+            <a href="#" class="read-more">read more</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="acc-item">
+        <div class="acc-header">
+          <span class="acc-icon">+</span>
+          <span class="acc-title">Residential</span>
+        </div>
+        <div class="acc-content">
+          <div class="acc-img-wrap">
+            <img src="assets/images/hero_2.png" alt="Residential" />
+          </div>
+          <div class="acc-text-wrap">
+            <span class="acc-close">&minus;</span>
+            <p>Lorem ipsum dolor sit amet, cons ectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+            <a href="#" class="read-more">read more</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 4 (Active default) -->
+      <div class="acc-item active">
+        <div class="acc-header">
+          <span class="acc-icon">&minus;</span>
+          <span class="acc-title">Interior</span>
+        </div>
+        <div class="acc-content">
+          <div class="acc-img-wrap">
+            <img src="Project%20images/A%20(10).png" alt="Interior" />
+          </div>
+          <div class="acc-text-wrap">
+            <span class="acc-close">&minus;</span>
+            <p>Lorem ipsum dolor sit amet, cons ectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+            <a href="#" class="read-more">read more</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+     QUOTE BANNER SECTION
+============================================================ -->
+  <section id="quote-banner" class="reveal">
+    <div class="quote-banner-content container">
+      <h2>The whimsical feel of Villa Esther begins with the Neo-Modern gateway in the style of Le Corbusier's Villa Savoye.</h2>
+    </div>
+  </section>
   <!-- ============================================================
      TESTIMONIALS
 ============================================================ -->

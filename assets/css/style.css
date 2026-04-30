@@ -537,7 +537,7 @@ p { line-height: 1.75; color: var(--gray-dark); font-weight: 300; }
 
 .our-work-container {
   display: flex;
-  align-items: stretch;
+  align-items: center;
   min-height: 500px;
 }
 
@@ -587,11 +587,12 @@ p { line-height: 1.75; color: var(--gray-dark); font-weight: 300; }
 
 .our-work-swiper {
   width: 100%;
-  height: 550px;
+  height: 60vh;
+  max-height: 600px;
 }
 
 .our-work-slide {
-  width: 85%;
+  width: 70%;
   height: 100%;
   margin-right: 15px;
   cursor: pointer;
@@ -605,19 +606,152 @@ p { line-height: 1.75; color: var(--gray-dark); font-weight: 300; }
 .our-work-nav {
   display: flex;
   justify-content: flex-end;
-  gap: 20px;
-  margin-top: 20px;
-  padding-right: 20px;
+  gap: 30px;
+  margin-top: 30px;
+  padding-right: 30px;
 }
 .our-work-nav button {
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
+  font-weight: 300;
   cursor: pointer;
   background: none;
   border: none;
   font-family: var(--font-b);
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+.our-work-nav button:hover {
+  opacity: 1;
 }
 
+/* ===========================
+   HORIZONTAL ACCORDION SERVICES
+=========================== */
+.accordion-section {
+  background: var(--white);
+  padding: 100px 0;
+}
+
+.acc-container {
+  display: flex;
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 600px;
+  border-left: 1px solid #eaeaea;
+  border-right: 1px solid #eaeaea;
+}
+
+.acc-item {
+  display: flex;
+  flex: 0 0 100px;
+  border-right: 1px solid #eaeaea;
+  transition: flex 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  overflow: hidden;
+  background: var(--white);
+}
+
+.acc-item.active {
+  flex: 1;
+}
+
+.acc-header {
+  width: 100px;
+  min-width: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+  cursor: pointer;
+  background: var(--white);
+  transition: background 0.3s;
+}
+
+.acc-header:hover {
+  background: #fcfcfc;
+}
+
+.acc-icon {
+  font-family: var(--font-b);
+  font-size: 1.8rem;
+  color: #bbb;
+  font-weight: 300;
+}
+
+.acc-title {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-family: var(--font-h);
+  font-size: 2.4rem;
+  font-weight: 300;
+  color: #111;
+  white-space: nowrap;
+}
+
+.acc-content {
+  display: flex;
+  flex: 1;
+  opacity: 0;
+  min-width: 0;
+  transition: opacity 0.4s ease 0.2s;
+  pointer-events: none;
+}
+
+.acc-item.active .acc-content {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.acc-img-wrap {
+  flex: 0 0 45%;
+  height: 100%;
+}
+.acc-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.acc-text-wrap {
+  flex: 1;
+  padding: 60px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.acc-close {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  font-size: 2.4rem;
+  color: #ccc;
+  cursor: pointer;
+  font-weight: 300;
+  font-family: var(--font-b);
+}
+
+.acc-text-wrap p {
+  font-family: var(--font-b);
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  max-width: 500px;
+}
+
+.acc-text-wrap .read-more {
+  font-family: var(--font-b);
+  font-size: 0.95rem;
+  color: var(--black);
+  text-decoration: none;
+  border-bottom: 1px solid var(--black);
+  align-self: flex-start;
+  padding-bottom: 2px;
+}
 @media (max-width: 900px) {
   .our-work-container {
     flex-direction: column;
@@ -633,6 +767,48 @@ p { line-height: 1.75; color: var(--gray-dark); font-weight: 300; }
   }
   .our-work-slide {
     width: 90%;
+  }
+}
+
+/* ===========================
+   QUOTE BANNER SECTION
+=========================== */
+#quote-banner {
+  background-image: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 70%), url('../../Project%20images/WIN_Facility6.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 85vh;
+  min-height: 500px;
+  max-height: 800px;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 60px;
+  width: 100%;
+}
+
+.quote-banner-content {
+  width: 100%;
+}
+
+.quote-banner-content h2 {
+  color: var(--white);
+  font-family: var(--font-b);
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  font-weight: 300;
+  max-width: 900px;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0 40px;
+}
+
+@media (max-width: 900px) {
+  #quote-banner {
+    height: 60vh;
+    padding-bottom: 40px;
+  }
+  .quote-banner-content h2 {
+    padding: 0 20px;
   }
 }
 
