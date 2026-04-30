@@ -472,6 +472,80 @@
   </section>
 
   <!-- ============================================================
+     JOURNAL SECTION
+============================================================ -->
+  <section id="journal" aria-label="Journal">
+    <div class="journal-header container">
+      <span class="journal-label">&bull; &nbsp;JOURNAL</span>
+      <h2 class="journal-title">Latest From <span class="journal-accent">Our Studio</span></h2>
+    </div>
+
+    <div class="journal-grid">
+
+      <!-- Post 1 — image sits high (normal top) -->
+      <article class="journal-card reveal-up" style="--delay:0s">
+        <a href="#" class="journal-img-wrap">
+          <img src="Project%20images/2023-11-07.jpg" alt="Modern Architecture Review" />
+        </a>
+        <div class="journal-body">
+          <div class="journal-meta">
+            <span class="journal-cat">ARCHITECTURE</span>
+            <span class="journal-sep">|</span>
+            <span class="journal-date">APRIL 18, 2024</span>
+          </div>
+          <h3 class="journal-post-title">Designing Spaces That <span class="journal-accent">Breathe</span></h3>
+        </div>
+      </article>
+
+      <!-- Post 2 — image taller, card pushed down -->
+      <article class="journal-card journal-card--offset reveal-up" style="--delay:0.12s">
+        <a href="#" class="journal-img-wrap journal-img-wrap--tall">
+          <img src="Project%20images/WhatsApp%20Image%202023-07-17%20at%2021.07.37%20(1).jpeg" alt="Interior Philosophy" />
+        </a>
+        <div class="journal-body">
+          <div class="journal-meta">
+            <span class="journal-cat">INTERIORS</span>
+            <span class="journal-sep">|</span>
+            <span class="journal-date">MARCH 02, 2024</span>
+          </div>
+          <h3 class="journal-post-title">Interior Philosophy And <span class="journal-accent">Creative</span> Vision</h3>
+        </div>
+      </article>
+
+      <!-- Post 3 — normal height -->
+      <article class="journal-card reveal-up" style="--delay:0.24s">
+        <a href="#" class="journal-img-wrap">
+          <img src="Project%20images/1%20(4).png" alt="Glass and Structure" />
+        </a>
+        <div class="journal-body">
+          <div class="journal-meta">
+            <span class="journal-cat">DESIGN</span>
+            <span class="journal-sep">|</span>
+            <span class="journal-date">FEBRUARY 14, 2024</span>
+          </div>
+          <h3 class="journal-post-title">Glass Facades And How To <span class="journal-accent">Design</span> Them</h3>
+        </div>
+      </article>
+
+      <!-- Post 4 — image taller, card pushed down -->
+      <article class="journal-card journal-card--offset reveal-up" style="--delay:0.36s">
+        <a href="#" class="journal-img-wrap journal-img-wrap--tall">
+          <img src="Project%20images/A%20(10).png" alt="Coexisting with Landscape" />
+        </a>
+        <div class="journal-body">
+          <div class="journal-meta">
+            <span class="journal-cat">LANDSCAPE</span>
+            <span class="journal-sep">|</span>
+            <span class="journal-date">JANUARY 08, 2024</span>
+          </div>
+          <h3 class="journal-post-title">Coexisting With The <span class="journal-accent">Landscape</span> Is The Main Rule</h3>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
      STATS BANNER
 ============================================================ -->
   <section id="stats">
