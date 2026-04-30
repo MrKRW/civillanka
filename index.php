@@ -89,16 +89,16 @@
   <section id="hero" class="split-view" aria-label="Featured Projects Split View">
     <!-- Left Half -->
     <div class="split-half split-left">
-      <img src="Project%20images/1%20(4).png" class="split-bg" alt="Exterior architecture" />
+      <img src="Project%20images/hero_exterior.png" class="split-bg" alt="Exterior architecture" />
       <div class="split-overlay"></div>
-      <div class="vert-text vert-left">Local</div>
+      <div class="vert-text vert-left">exterior</div>
     </div>
 
     <!-- Right Half -->
     <div class="split-half split-right">
-      <img src="Project%20images/A%20(10).png" class="split-bg" alt="Interior design" />
+      <img src="Project%20images/hero_interior.png" class="split-bg" alt="Interior design" />
       <div class="split-overlay"></div>
-      <div class="vert-text vert-right">International</div>
+      <div class="vert-text vert-right">interior</div>
     </div>
 
     <!-- Center Logo -->
