@@ -550,8 +550,7 @@
         <!-- Brand: large two-line heading -->
         <div class="footer-brand">
           <a href="index.php" aria-label="Civilanka Home" class="footer-brand-link">
-            <span class="footer-brand-bold">Civilanka</span>
-            <span class="footer-brand-light">Architects</span>
+            <img src="Logos/sharedImage%20-%20Copy.PNG" alt="Civilanka Architects" class="logo-img logo-img--footer" />
           </a>
         </div>
 

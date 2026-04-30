@@ -319,8 +319,7 @@ p {
   display: block;
 }
 
-.logo-img--hero,
-.logo-img--footer {
+.logo-img--hero {
   filter: brightness(0) invert(1);
   /* Makes dark logo white */
 }
@@ -1687,7 +1686,7 @@ margin-bottom: 2.5rem;
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #0047FF; /* Hiroshi Blue */
+  color: #000000;
   margin-bottom: 24px;
 }
 
