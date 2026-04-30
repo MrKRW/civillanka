@@ -1119,19 +1119,14 @@ p {
 
 /* Photo cells — dark square with B&W portrait */
 .team-cell.team-photo {
-  background: #1a1a1a;
+  background: #E8E4D9;
   aspect-ratio: 1 / 1;
   overflow: hidden;
   position: relative;
 }
 
 .team-cell.team-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  filter: grayscale(100%) contrast(1.05);
-  transition: filter 0.4s var(--ease), transform 0.5s var(--ease);
+  display: none;
 }
 
 .team-cell.team-photo:hover img {
