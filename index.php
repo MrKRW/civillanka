@@ -500,7 +500,8 @@
       <!-- Post 2 — image taller, card pushed down -->
       <article class="journal-card journal-card--offset reveal-up" style="--delay:0.12s">
         <a href="#" class="journal-img-wrap journal-img-wrap--tall">
-          <img src="Project%20images/WhatsApp%20Image%202023-07-17%20at%2021.07.37%20(1).jpeg" alt="Interior Philosophy" />
+          <img src="Project%20images/WhatsApp%20Image%202023-07-17%20at%2021.07.37%20(1).jpeg"
+            alt="Interior Philosophy" />
         </a>
         <div class="journal-body">
           <div class="journal-meta">
@@ -508,7 +509,8 @@
             <span class="journal-sep">|</span>
             <span class="journal-date">MARCH 02, 2024</span>
           </div>
-          <h3 class="journal-post-title">Interior Philosophy And <span class="journal-accent">Creative</span> Vision</h3>
+          <h3 class="journal-post-title">Interior Philosophy And <span class="journal-accent">Creative</span> Vision
+          </h3>
         </div>
       </article>
 
@@ -538,7 +540,8 @@
             <span class="journal-sep">|</span>
             <span class="journal-date">JANUARY 08, 2024</span>
           </div>
-          <h3 class="journal-post-title">Coexisting With The <span class="journal-accent">Landscape</span> Is The Main Rule</h3>
+          <h3 class="journal-post-title">Coexisting With The <span class="journal-accent">Landscape</span> Is The Main
+            Rule</h3>
         </div>
       </article>
 
