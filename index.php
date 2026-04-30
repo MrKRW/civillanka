@@ -30,7 +30,7 @@
   <header id="sticky-header" role="banner" aria-label="Sticky Navigation">
     <!-- Logo left -->
     <a href="index.php" class="sticky-logo" aria-label="Civilanka Home">
-      <img src="assets/images/logo-full.png" alt="Civilanka" class="logo-img logo-img--sticky" />
+      <strong>Civilanka</strong>Architects
     </a>
 
     <!-- Nav center -->
@@ -73,59 +73,39 @@
   </nav>
 
   <!-- ============================================================
-     TOP BAR: Centered Logo
+     TOP BAR
 ============================================================ -->
   <div id="top-bar" aria-label="Site header">
     <a href="index.php" class="site-logo" aria-label="Civilanka Home">
-      <img src="assets/images/logo-transparent.png" alt="Civilanka" class="logo-img logo-img--hero" />
+      <strong>Civilanka</strong>Architects
     </a>
+    <!-- Circle menu button (top right) -->
+    <button class="circle-btn" id="circle-menu-btn" aria-label="Open menu" aria-expanded="false"></button>
   </div>
 
-  <!-- Circle menu button (top right) -->
-  <button class="circle-btn" id="circle-menu-btn" aria-label="Open menu" aria-expanded="false"></button>
-
   <!-- ============================================================
-     HERO SECTION
+     HERO SECTION (SPLIT SCREEN)
 ============================================================ -->
-  <section id="hero" aria-label="Featured Projects Slider">
-    <div class="swiper hero-swiper">
-      <div class="swiper-wrapper">
-
-        <!-- Slide 1 -->
-        <div class="swiper-slide hero-slide" data-title="The Concrete Pavilion" data-cat="Residential"
-          data-swiper-autoplay="2500">
-          <img class="hero-slide-img" src="assets/images/hero_1.png" alt="Minimalist concrete facade architecture" />
-          <div class="hero-overlay"></div>
-        </div>
-
-        <!-- Slide 2 -->
-        <div class="swiper-slide hero-slide" data-title="Alvar Home &amp; Studio" data-cat="Heritage">
-          <img class="hero-slide-img" src="assets/images/hero_2.png" alt="Luxury modern villa with infinity pool" />
-          <div class="hero-overlay"></div>
-        </div>
-
-        <!-- Slide 3 -->
-        <div class="swiper-slide hero-slide" data-title="Meridian Commercial Tower" data-cat="Commercial">
-          <img class="hero-slide-img" src="assets/images/hero_3.png" alt="Contemporary glass commercial building" />
-          <div class="hero-overlay"></div>
-        </div>
-
-      </div><!-- /swiper-wrapper -->
-    </div><!-- /swiper -->
-
-    <!-- Bottom-right: project caption (updated via JS) -->
-    <div class="hero-caption" aria-live="polite">
-      <div class="hero-caption-title">The Concrete Pavilion</div>
-      <div class="hero-caption-cat">Residential</div>
+  <section id="hero" class="split-view" aria-label="Featured Projects Split View">
+    <!-- Left Half -->
+    <div class="split-half split-left">
+      <img src="Project%20images/2023-11-07.jpg" class="split-bg" alt="Exterior architecture" />
+      <div class="split-overlay"></div>
+      <div class="vert-text vert-left">exterior</div>
+    </div>
+    
+    <!-- Right Half -->
+    <div class="split-half split-right">
+      <img src="Project%20images/WhatsApp%20Image%202023-07-17%20at%2021.07.37%20(1).jpeg" class="split-bg filter-dark" alt="Interior design" />
+      <div class="split-overlay dark"></div>
+      <div class="vert-text vert-right">interior</div>
     </div>
 
-    <!-- Bottom-left: dash pagination -->
-    <div class="hero-pagination" aria-label="Slide navigation">
-      <div class="dash active" data-index="0"></div>
-      <div class="dash" data-index="1"></div>
-      <div class="dash" data-index="2"></div>
+    <!-- Center Logo / Text -->
+    <div class="center-brand">
+      <div class="brand-letters">CA</div>
+      <div class="brand-sub">STUDIO</div>
     </div>
-
   </section>
 
   <!-- ============================================================
@@ -133,44 +113,31 @@
 ============================================================ -->
   <section id="about" class="section-pad">
     <div class="container">
-      <div class="about-grid">
-
-        <!-- Image -->
-        <div class="about-image-wrap reveal-left">
-          <img src="assets/images/about.png" alt="Architect at work reviewing blueprints" />
-          <div class="about-badge">
-            <span class="num">25</span>
-            <span class="lbl">Years of<br />Excellence</span>
-          </div>
+      <div class="new-about-top">
+        <div class="new-about-text reveal-left">
+          <span class="new-section-label">&bull; &nbsp;ARCHITECT STUDIO</span>
+          <h2 class="new-about-heading">Architects excited about beauty,<br>affordability sustainability materials<br>for every project and person</h2>
+          <a href="#" class="new-read-more">read more</a>
         </div>
-
-        <!-- Text -->
-        <div class="about-text reveal-right">
-          <span class="section-label">Our Philosophy</span>
-          <h2>Architecture as a<br />Living Art Form</h2>
-          <p>At Civilanka, we believe every structure tells a story. Founded in 1999, our studio merges timeless design
-            principles with contemporary innovation to create spaces that breathe, evolve, and endure.</p>
-          <p>Our interdisciplinary team of architects, designers, and urban planners collaborate closely with each
-            client — translating visions into spaces of quiet strength and remarkable beauty.</p>
-
-          <div class="about-stats stagger">
-            <div class="stat-item">
-              <div class="num">180<span style="color:var(--accent)">+</span></div>
-              <div class="lbl">Projects Built</div>
-            </div>
-            <div class="stat-item">
-              <div class="num">42<span style="color:var(--accent)">+</span></div>
-              <div class="lbl">Design Awards</div>
-            </div>
-            <div class="stat-item">
-              <div class="num">18<span style="color:var(--accent)">+</span></div>
-              <div class="lbl">Countries</div>
-            </div>
-          </div>
-
-          <a href="#projects" class="btn btn-dark btn-arrow"><span>View Our Portfolio</span></a>
+        <div class="new-about-image reveal-right">
+          <img src="Project%20images/2023-11-07.jpg" alt="Architects reviewing blueprints" />
         </div>
-
+      </div>
+      
+      <div class="new-about-bottom stagger">
+        <div class="new-about-links">
+          <a href="#">Design a perfect home</a>
+          <a href="#">Download our brochure</a>
+          <a href="#">Ask us your questions our architects</a>
+        </div>
+        <div class="new-about-col">
+          <h3>Urban Exteriors</h3>
+          <p>Purus sit amet vol utpat con sequat mauris nunc congue. Sed id s emper risus in hend rrerit. Facilisi etiam dig nissim diam quis enim. Quis auctor.</p>
+        </div>
+        <div class="new-about-col">
+          <h3>Cityscapes Buildings</h3>
+          <p>Purus sit amet vol utpat con sequat mauris nunc congue. Sed id s emper risus in hend rrerit. Facilisi etiam dig nissim diam quis enim. Quis auctor.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -270,70 +237,38 @@
   </section>
 
   <!-- ============================================================
-     PROJECTS SECTION
+     PROJECTS SECTION (OUR WORK)
 ============================================================ -->
-  <section id="projects" class="section-pad">
-    <div class="container">
-      <div class="projects-header reveal">
-        <div>
-          <span class="section-label">Selected Work</span>
-          <h2>Featured<br />Projects</h2>
+  <section id="projects" class="section-pad dark-section">
+    <div class="our-work-container">
+      <div class="our-work-left reveal-left">
+        <span class="our-work-label">&bull; &nbsp;OUR WORK</span>
+        <div class="our-work-info">
+          <h2 class="our-work-title">The feel of Villa Yun</h2>
+          <span class="our-work-cat">WELLNESS</span>
         </div>
-        <a href="projects.php" class="btn btn-dark btn-arrow"><span>All Projects</span></a>
       </div>
-
-      <div class="projects-grid stagger">
-
-        <!-- Card 1 — Featured (tall) -->
-        <div class="project-card featured">
-          <img src="assets/images/hero_1.png" alt="The Concrete House — Private Residence" />
-          <div class="project-card-overlay"></div>
-          <div class="project-card-info">
-            <h3>The Concrete House</h3>
-            <span>Residential &nbsp;·&nbsp; 2024</span>
+      <div class="our-work-right reveal-right">
+        <div class="swiper our-work-swiper">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide our-work-slide" data-title="The feel of Villa Yun" data-cat="WELLNESS">
+              <img src="Project%20images/2023-11-07.jpg" alt="Villa Yun" />
+            </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide our-work-slide" data-title="Modern Office" data-cat="COMMERCIAL">
+              <img src="Project%20images/WhatsApp%20Image%202023-07-17%20at%2021.07.37%20(1).jpeg" alt="Modern Office" />
+            </div>
+            <!-- Slide 3 -->
+            <div class="swiper-slide our-work-slide" data-title="Minimalist Living" data-cat="RESIDENTIAL">
+              <img src="Project%20images/1%20(4).png" alt="Minimalist Living" />
+            </div>
           </div>
         </div>
-
-        <!-- Card 2 -->
-        <div class="project-card">
-          <img src="assets/images/project_2.png" alt="Luminary Interiors — Commercial" />
-          <div class="project-card-overlay"></div>
-          <div class="project-card-info">
-            <h3>Luminary Interiors</h3>
-            <span>Interior &nbsp;·&nbsp; 2023</span>
-          </div>
+        <div class="our-work-nav">
+          <button class="our-work-prev">&larr;</button>
+          <button class="our-work-next">&rarr;</button>
         </div>
-
-        <!-- Card 3 -->
-        <div class="project-card">
-          <img src="assets/images/project_3.png" alt="Meridian Tower — Commercial" />
-          <div class="project-card-overlay"></div>
-          <div class="project-card-info">
-            <h3>Meridian Tower</h3>
-            <span>Commercial &nbsp;·&nbsp; 2023</span>
-          </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="project-card">
-          <img src="assets/images/project_1.png" alt="Forest Villa — Residential" />
-          <div class="project-card-overlay"></div>
-          <div class="project-card-info">
-            <h3>Forest Villa</h3>
-            <span>Residential &nbsp;·&nbsp; 2022</span>
-          </div>
-        </div>
-
-        <!-- Card 5 -->
-        <div class="project-card">
-          <img src="assets/images/hero_2.png" alt="Skyline Residence — Urban" />
-          <div class="project-card-overlay"></div>
-          <div class="project-card-info">
-            <h3>Skyline Residence</h3>
-            <span>Urban &nbsp;·&nbsp; 2022</span>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>

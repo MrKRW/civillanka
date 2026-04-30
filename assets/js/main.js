@@ -76,38 +76,33 @@ const backTop = document.getElementById('back-top');
 backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
 // ============================
-// HERO SWIPER — slide left
+// OLD HERO SWIPER REMOVED
 // ============================
-const slides     = document.querySelectorAll('.hero-slide');
-const captionTitle = document.querySelector('.hero-caption-title');
-const captionCat   = document.querySelector('.hero-caption-cat');
-const dashes       = document.querySelectorAll('.hero-pagination .dash');
 
-function updateCaption(index) {
-  const slide = slides[index];
-  captionTitle.textContent = slide.dataset.title || '';
-  captionCat.textContent   = slide.dataset.cat   || '';
-  dashes.forEach((d, i) => d.classList.toggle('active', i === index));
-}
+// ============================
+// OUR WORK SWIPER
+// ============================
+const ourWorkTitle = document.querySelector('.our-work-title');
+const ourWorkCat   = document.querySelector('.our-work-cat');
 
-const heroSwiper = new Swiper('.hero-swiper', {
+const ourWorkSwiper = new Swiper('.our-work-swiper', {
   loop: true,
-  speed: 900,
-  effect: 'slide',            // slide left
-  direction: 'horizontal',
-  autoplay: { delay: 5500, disableOnInteraction: false },
+  speed: 800,
+  slidesPerView: 'auto',
+  navigation: {
+    prevEl: '.our-work-prev',
+    nextEl: '.our-work-next'
+  },
   on: {
     slideChange() {
-      updateCaption(this.realIndex);
+      // Find the active slide
+      const activeSlide = this.slides[this.activeIndex];
+      if (activeSlide && ourWorkTitle && ourWorkCat) {
+        ourWorkTitle.textContent = activeSlide.dataset.title || '';
+        ourWorkCat.textContent   = activeSlide.dataset.cat   || '';
+      }
     }
   }
-});
-
-// Dash clicks navigate slider
-dashes.forEach(d => {
-  d.addEventListener('click', () => {
-    heroSwiper.slideToLoop(+d.dataset.index);
-  });
 });
 
 // ============================
