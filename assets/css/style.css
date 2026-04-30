@@ -1589,50 +1589,6 @@ margin-bottom: 2.5rem;
 }
 
 /* ===========================
-   STATS BANNER
-=========================== */
-#stats {
-  background: var(--cream);
-  padding: 80px 0;
-}
-
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0;
-}
-
-.stat-box {
-  text-align: center;
-  padding: 40px;
-  border-left: 1px solid var(--gray-light);
-}
-
-.stat-box:first-child {
-  border-left: none;
-}
-
-.stat-box .big-num {
-  font-family: var(--font-h);
-  font-size: clamp(3rem, 5vw, 5rem);
-  font-weight: 300;
-  color: var(--black);
-  line-height: 1;
-}
-
-.stat-box .plus {
-  color: var(--accent);
-}
-
-.stat-box p {
-  font-size: 0.75rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--gray-mid);
-  margin-top: 10px;
-}
-
-/* ===========================
    CTA BANNER
 =========================== */
 #cta-banner {

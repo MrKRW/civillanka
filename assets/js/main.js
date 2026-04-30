@@ -186,30 +186,3 @@ if (teamSection) {
   teamObserver.observe(teamSection);
 }
 
-// ============================
-// COUNTER ANIMATION
-// ============================
-function animateCounter(el) {
-  const target = +el.getAttribute('data-target');
-  const start  = performance.now();
-  const duration = 1800;
-  const frame = (now) => {
-    const p = Math.min((now - start) / duration, 1);
-    const ease = 1 - Math.pow(1 - p, 3);
-    el.textContent = Math.floor(ease * target);
-    if (p < 1) requestAnimationFrame(frame);
-    else el.textContent = target;
-  };
-  requestAnimationFrame(frame);
-}
-
-const counterObs = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      animateCounter(e.target);
-      counterObs.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.5 });
-
-document.querySelectorAll('[data-target]').forEach(el => counterObs.observe(el));

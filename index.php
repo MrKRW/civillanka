@@ -545,31 +545,6 @@
     </div>
   </section>
 
-  <!-- ============================================================
-     STATS BANNER
-============================================================ -->
-  <section id="stats">
-    <div class="container">
-      <div class="stats-grid stagger">
-        <div class="stat-box">
-          <div class="big-num"><span data-target="180">0</span><span class="plus">+</span></div>
-          <p>Projects Completed</p>
-        </div>
-        <div class="stat-box">
-          <div class="big-num"><span data-target="42">0</span><span class="plus">+</span></div>
-          <p>Design Awards</p>
-        </div>
-        <div class="stat-box">
-          <div class="big-num"><span data-target="25">0</span><span class="plus">+</span></div>
-          <p>Years of Practice</p>
-        </div>
-        <div class="stat-box">
-          <div class="big-num"><span data-target="18">0</span><span class="plus">+</span></div>
-          <p>Countries Reached</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ============================================================
      CTA BANNER
@@ -601,7 +576,7 @@
           </a>
         </div>
 
-        <!-- Columns: Social, Info, Contact -->
+        <!-- Columns: Social, Contact -->
         <div class="footer-cols">
 
           <div class="footer-col">
@@ -610,15 +585,6 @@
               <li><a href="#">Instagram</a></li>
               <li><a href="#">Behance</a></li>
               <li><a href="#">LinkedIn</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-col">
-            <h4 class="footer-col-label">Info</h4>
-            <ul>
-              <li><a href="#footer">Contact</a></li>
-              <li><a href="#">Terms of service</a></li>
-              <li><a href="#about">Studio</a></li>
             </ul>
           </div>
 
