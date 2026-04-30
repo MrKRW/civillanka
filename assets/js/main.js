@@ -111,8 +111,9 @@ const ourWorkSwiper = new Swiper('.our-work-swiper', {
 const testSwiper = new Swiper('.test-swiper', {
   loop: true,
   speed: 900,
-  effect: 'fade',
-  fadeEffect: { crossFade: true },
+  // Use horizontal slide animation (default)
+  direction: 'horizontal',
+  // Removed fade effect for slide transition
   autoplay: { delay: 6000, disableOnInteraction: false },
   navigation: { prevEl: '.test-prev', nextEl: '.test-next' }
 });

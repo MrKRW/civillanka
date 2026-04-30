@@ -994,7 +994,7 @@ p { line-height: 1.75; color: var(--gray-dark); font-weight: 300; }
 /* ===========================
    TESTIMONIALS
 =========================== */
-#testimonials { background: var(--black); }
+#testimonials { background: var(--white); }
 .testimonials-inner { max-width: 800px; margin: 0 auto; text-align: center; }
 .testimonials-inner .section-label { justify-content: center; display: flex; }
 .quote-mark {
