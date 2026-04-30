@@ -181,6 +181,20 @@ p { line-height: 1.75; color: var(--gray-dark); font-weight: 300; }
 .site-logo strong { font-weight: 700; }
 .site-logo span   { font-weight: 300; }
 
+/* Logo Images */
+.logo-img {
+  height: 28px;
+  width: auto;
+  display: block;
+}
+.logo-img--hero, 
+.logo-img--footer {
+  filter: brightness(0) invert(1); /* Makes dark logo white */
+}
+.logo-img--sticky {
+  height: 32px;
+}
+
 /* Circle button — floats over hero, hides when sticky header appears */
 .circle-btn {
   position: fixed;

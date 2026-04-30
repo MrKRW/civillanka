@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FORMA — Architecture & Design Studio</title>
-  <meta name="description" content="FORMA is a premier architecture and design studio creating spaces that inspire. Residential, commercial, and landscape architecture." />
+  <title>Civilanka — Architecture & Design Studio</title>
+  <meta name="description" content="Civilanka is a premier architecture and design studio in Sri Lanka, creating spaces that inspire. Residential, commercial, and landscape architecture." />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,8 +24,8 @@
 ============================================================ -->
 <header id="sticky-header" role="banner" aria-label="Sticky Navigation">
   <!-- Logo left -->
-  <a href="index.php" class="sticky-logo" aria-label="FORMA Home">
-    <strong>FORMA</strong><span>Architects</span>
+  <a href="index.php" class="sticky-logo" aria-label="Civilanka Home">
+    <img src="assets/images/logo-full.png" alt="Civilanka" class="logo-img logo-img--sticky" />
   </a>
 
   <!-- Nav center -->
@@ -71,8 +71,8 @@
      TOP BAR: Centered Logo
 ============================================================ -->
 <div id="top-bar" aria-label="Site header">
-  <a href="index.php" class="site-logo" aria-label="FORMA Home">
-    <strong>FORMA</strong><span>Architects</span>
+  <a href="index.php" class="site-logo" aria-label="Civilanka Home">
+    <img src="assets/images/logo-transparent.png" alt="Civilanka" class="logo-img logo-img--hero" />
   </a>
 </div>
 
@@ -148,7 +148,7 @@
       <div class="about-text reveal-right">
         <span class="section-label">Our Philosophy</span>
         <h2>Architecture as a<br />Living Art Form</h2>
-        <p>At FORMA, we believe every structure tells a story. Founded in 1999, our studio merges timeless design principles with contemporary innovation to create spaces that breathe, evolve, and endure.</p>
+        <p>At Civilanka, we believe every structure tells a story. Founded in 1999, our studio merges timeless design principles with contemporary innovation to create spaces that breathe, evolve, and endure.</p>
         <p>Our interdisciplinary team of architects, designers, and urban planners collaborate closely with each client — translating visions into spaces of quiet strength and remarkable beauty.</p>
 
         <div class="about-stats stagger">
@@ -344,19 +344,19 @@
         <div class="swiper-wrapper">
 
           <div class="swiper-slide">
-            <p class="testimonial-text">FORMA transformed our vision into a home that surpasses everything we imagined. Their attention to light, material, and proportion is extraordinary. We live in a work of art.</p>
+            <p class="testimonial-text">Civilanka transformed our vision into a home that surpasses everything we imagined. Their attention to light, material, and proportion is extraordinary. We live in a work of art.</p>
             <p class="testimonial-author">JAMES &amp; CLARA WHITFIELD</p>
             <p class="testimonial-role">Private Residence Client, London</p>
           </div>
 
           <div class="swiper-slide">
-            <p class="testimonial-text">Working with the FORMA team was a revelation. They listened deeply and delivered a commercial space that perfectly reflects our brand values while elevating the entire neighbourhood.</p>
+            <p class="testimonial-text">Working with the Civilanka team was a revelation. They listened deeply and delivered a commercial space that perfectly reflects our brand values while elevating the entire neighbourhood.</p>
             <p class="testimonial-author">SEBASTIAN NAKAMURA</p>
             <p class="testimonial-role">CEO, Nakamura Group</p>
           </div>
 
           <div class="swiper-slide">
-            <p class="testimonial-text">The master plan FORMA created for our mixed-use development is visionary. Their urban sensibility and design quality are unmatched in the industry.</p>
+            <p class="testimonial-text">The master plan Civilanka created for our mixed-use development is visionary. Their urban sensibility and design quality are unmatched in the industry.</p>
             <p class="testimonial-author">AMARA OSEI-BONSU</p>
             <p class="testimonial-role">Director of Development, Cityline Properties</p>
           </div>
@@ -420,7 +420,9 @@
     <div class="footer-grid">
 
       <div class="footer-brand">
-        <div class="logo">FORMA</div>
+        <a href="index.php" aria-label="Civilanka Home">
+          <img src="assets/images/logo-transparent.png" alt="Civilanka" class="logo-img logo-img--footer" />
+        </a>
         <p>An architecture and design studio dedicated to creating spaces of enduring beauty and purpose.</p>
       </div>
 
@@ -452,14 +454,14 @@
           Colombo 03<br />
           Sri Lanka<br /><br />
           <a href="tel:+94112345678">+94 11 234 5678</a><br />
-          <a href="mailto:hello@forma.studio">hello@forma.studio</a>
+          <a href="mailto:hello@civillanka.com">hello@civillanka.com</a>
         </address>
       </div>
 
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; 2025 FORMA Architecture Studio. All rights reserved.</p>
+      <p>&copy; 2025 Civilanka Architecture Studio. All rights reserved.</p>
       <div class="footer-socials">
         <a href="#">Instagram</a>
         <a href="#">Behance</a>
