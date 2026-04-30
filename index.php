@@ -511,57 +511,55 @@
      FOOTER
 ============================================================ -->
   <footer id="footer" role="contentinfo">
-    <div class="container">
-      <div class="footer-grid">
+    <div class="footer-inner">
 
+      <!-- Main footer body -->
+      <div class="footer-body">
+
+        <!-- Brand: large two-line heading -->
         <div class="footer-brand">
-          <a href="index.php" aria-label="Civilanka Home">
-            <img src="assets/images/logo-transparent.png" alt="Civilanka" class="logo-img logo-img--footer" />
+          <a href="index.php" aria-label="Civilanka Home" class="footer-brand-link">
+            <span class="footer-brand-bold">Civilanka</span>
+            <span class="footer-brand-light">Architects</span>
           </a>
-          <p>An architecture and design studio dedicated to creating spaces of enduring beauty and purpose.</p>
         </div>
 
-        <div class="footer-col">
-          <h4>Navigation</h4>
-          <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#testimonials">Journal</a></li>
-            <li><a href="#footer">Contact</a></li>
-          </ul>
-        </div>
+        <!-- Columns: Social, Info, Contact -->
+        <div class="footer-cols">
 
-        <div class="footer-col">
-          <h4>Services</h4>
-          <ul>
-            <li><a href="#services">Architectural Design</a></li>
-            <li><a href="#services">Interior Architecture</a></li>
-            <li><a href="#services">Urban Planning</a></li>
-            <li><a href="#services">Landscape Design</a></li>
-          </ul>
-        </div>
+          <div class="footer-col">
+            <h4 class="footer-col-label">Social</h4>
+            <ul>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Behance</a></li>
+              <li><a href="#">LinkedIn</a></li>
+            </ul>
+          </div>
 
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <address>
-            24 Studio Lane<br />
-            Colombo 03<br />
-            Sri Lanka<br /><br />
-            <a href="tel:+94112345678">+94 11 234 5678</a><br />
-            <a href="mailto:hello@civillanka.com">hello@civillanka.com</a>
-          </address>
-        </div>
+          <div class="footer-col">
+            <h4 class="footer-col-label">Info</h4>
+            <ul>
+              <li><a href="#footer">Contact</a></li>
+              <li><a href="#">Terms of service</a></li>
+              <li><a href="#about">Studio</a></li>
+            </ul>
+          </div>
 
+          <div class="footer-col">
+            <h4 class="footer-col-label">Contact</h4>
+            <address>
+              <a href="#">24 Studio Lane, Colombo</a><br />
+              <a href="tel:+94112345678">+94 11 234 5678</a><br />
+              <a href="mailto:hello@civillanka.com">hello@civillanka.com</a>
+            </address>
+          </div>
+
+        </div>
       </div>
 
+      <!-- Bottom strip -->
       <div class="footer-bottom">
-        <p>&copy; 2025 Civilanka Architecture Studio. All rights reserved.</p>
-        <div class="footer-socials">
-          <a href="#">Instagram</a>
-          <a href="#">Behance</a>
-          <a href="#">LinkedIn</a>
-        </div>
+        <p>&copy; 2025 Civilanka Architecture Studio</p>
       </div>
     </div>
   </footer>
