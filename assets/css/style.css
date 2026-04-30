@@ -941,10 +941,28 @@ p {
   cursor: pointer;
   background: var(--white);
   transition: background 0.3s;
+  position: relative;
 }
 
 .acc-header:hover {
   background: #fcfcfc;
+}
+
+.acc-header::before {
+  content: '';
+  position: absolute;
+  top: 85px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 0;
+  background-color: #111;
+  transition: height 0.4s cubic-bezier(0.4, 0, 0, 1);
+  pointer-events: none;
+}
+
+.acc-item:not(.active) .acc-header:hover::before {
+  height: 60px;
 }
 
 .acc-icon {
@@ -1029,9 +1047,28 @@ p {
   font-size: 0.95rem;
   color: var(--black);
   text-decoration: none;
-  border-bottom: 1px solid var(--black);
   align-self: flex-start;
-  padding-bottom: 2px;
+  padding-bottom: 4px;
+  position: relative;
+  display: inline-block;
+}
+
+.acc-text-wrap .read-more::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--black);
+  transform: scaleX(0);
+  transform-origin: right center;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0, 1);
+}
+
+.acc-text-wrap .read-more:hover::after {
+  transform: scaleX(1);
+  transform-origin: left center;
 }
 
 @media (max-width: 900px) {
