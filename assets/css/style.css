@@ -102,7 +102,7 @@ p { line-height: 1.75; color: var(--gray-dark); font-weight: 300; }
 #side-nav ul {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 18px;
   pointer-events: all;
 }
 #side-nav ul li {
@@ -110,32 +110,30 @@ p { line-height: 1.75; color: var(--gray-dark); font-weight: 300; }
   align-items: center;
   position: relative;
 }
-/* Active bar */
+/* Active pipe indicator */
 #side-nav ul li.active::before {
-  content: '';
-  display: inline-block;
-  width: 16px;
-  height: 1px;
-  background: var(--white);
-  margin-right: 10px;
-  flex-shrink: 0;
-  transition: background 0.3s;
+  content: '|';
+  color: var(--white);
+  font-size: 1.4rem;
+  font-weight: 200;
+  margin-right: 15px;
+  margin-top: -3px;
+  transition: opacity 0.3s;
 }
 #side-nav ul li:not(.active)::before {
-  content: '';
-  display: inline-block;
-  width: 16px;
-  margin-right: 10px;
-  flex-shrink: 0;
+  content: '|';
+  color: transparent;
+  font-size: 1.4rem;
+  margin-right: 15px;
 }
 #side-nav ul li a {
   font-family: var(--font-h);
-  font-size: 0.82rem;
+  font-size: 1.25rem;
   font-weight: 300;
-  letter-spacing: 0.03em;
-  color: rgba(255,255,255,0.75);
+  letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.9);
   transition: color 0.3s var(--ease);
-  line-height: 1.8;
+  line-height: 1;
   text-transform: lowercase;
 }
 #side-nav ul li.active a {
@@ -346,49 +344,53 @@ p { line-height: 1.75; color: var(--gray-dark); font-weight: 300; }
 /* Bottom-right: project title + category */
 .hero-caption {
   position: absolute;
-  bottom: 52px;
-  right: 50px;
+  bottom: 60px;
+  right: 60px;
   z-index: 10;
   text-align: right;
 }
 .hero-caption-title {
   font-family: var(--font-h);
-  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
   font-weight: 300;
   color: var(--white);
   letter-spacing: 0.01em;
-  line-height: 1.2;
-  margin-bottom: 4px;
+  line-height: 1.1;
+  margin-bottom: 12px;
 }
 .hero-caption-cat {
   font-family: var(--font-h);
-  font-size: 0.65rem;
-  font-weight: 500;
-  letter-spacing: 0.28em;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.32em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.75);
+  color: rgba(255,255,255,0.9);
+}
+.hero-caption-cat::before {
+  content: 'ARCHITECTURE | ';
+  opacity: 0.8;
 }
 
 /* Bottom-left: pagination dashes */
 .hero-pagination {
   position: absolute;
-  bottom: 60px;
-  left: 50px;
+  bottom: 40px;
+  left: 40px;
   z-index: 10;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 .hero-pagination .dash {
-  height: 1.5px;
-  background: rgba(255,255,255,0.45);
+  height: 1px;
+  background: rgba(255,255,255,0.25);
   transition: background 0.4s, width 0.4s;
   cursor: pointer;
-  width: 28px;
+  width: 20px;
 }
 .hero-pagination .dash.active {
-  background: var(--white);
-  width: 44px;
+  background: rgba(255,255,255,0.85);
+  width: 32px;
 }
 
 /* ===========================
