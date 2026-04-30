@@ -324,6 +324,10 @@ p {
   /* Makes dark logo white */
 }
 
+.logo-img--footer {
+  height: 120px;
+}
+
 .logo-img--sticky {
   height: 40px;
 }
