@@ -586,7 +586,12 @@
   </footer>
 
   <!-- Back to top -->
-  <button id="back-top" aria-label="Back to top">&#8593;</button>
+  <button id="back-top" aria-label="Back to top">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 18 H18 V6" stroke="#111" stroke-width="1.5" />
+      <polygon points="14,8 22,8 18,2" fill="#111" />
+    </svg>
+  </button>
 
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
