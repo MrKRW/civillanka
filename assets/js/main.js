@@ -88,6 +88,7 @@ const ourWorkCat   = document.querySelector('.our-work-cat');
 const ourWorkSwiper = new Swiper('.our-work-swiper', {
   loop: true,
   speed: 800,
+  autoplay: { delay: 2000, disableOnInteraction: false },
   slidesPerView: 'auto',
   navigation: {
     prevEl: '.our-work-prev',
