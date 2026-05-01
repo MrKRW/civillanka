@@ -625,18 +625,14 @@ p {
 }
 
 .new-about-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 40px;
+  display: block;
   margin-bottom: 80px;
   border-bottom: 1px solid #f0f0f0;
   padding-bottom: 60px;
 }
 
 .new-about-text {
-  flex: 1;
-  max-width: 60%;
+  max-width: 75%;
 }
 
 .new-section-label {
