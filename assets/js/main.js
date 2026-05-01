@@ -88,13 +88,13 @@ const ourWorkSwiper = new Swiper('.our-work-swiper', {
     disableOnInteraction: false 
   },
   slidesPerView: 'auto',
-  spaceBetween: 0,
+  spaceBetween: 30,
   breakpoints: {
     768: {
-      spaceBetween: 0
+      spaceBetween: 30
     },
     1024: {
-      spaceBetween: 0
+      spaceBetween: 30
     }
   },
   navigation: {
