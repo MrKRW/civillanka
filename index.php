@@ -91,14 +91,14 @@
     <div class="split-half split-left">
       <img src="Project%20images/1%20(4).png" class="split-bg" alt="International architecture" />
       <div class="split-overlay dark"></div>
-      <div class="vert-text vert-left">international</div>
+      <div class="vert-text vert-left">Local</div>
     </div>
 
     <!-- Right Half -->
     <div class="split-half split-right">
       <img src="Project%20images/A%20(10).png" class="split-bg" alt="Local architecture" />
       <div class="split-overlay dark"></div>
-      <div class="vert-text vert-right">local</div>
+      <div class="vert-text vert-right">international</div>
     </div>
 
     <!-- Center Logo -->
@@ -395,7 +395,7 @@
         <img src="team%20images/33.png" alt="Product Designer portrait" />
       </div>
 
-      
+
 
     </div>
   </section>
