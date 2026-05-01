@@ -1151,7 +1151,7 @@ p {
    TEAM SECTION
 =========================== */
 #team {
-  background: #E8E4D9;
+  background: #E4E7D5;
   padding: 120px 0;
 }
 
@@ -1218,7 +1218,7 @@ p {
 
 /* Photo cells — dark square with B&W portrait */
 .team-cell.team-photo {
-  background: #E8E4D9;
+  background: #E4E7D5;
   aspect-ratio: 1 / 1;
   overflow: hidden;
   position: relative;
@@ -1235,7 +1235,7 @@ p {
 
 /* Info cells — cream background with name / role / social */
 .team-cell.team-info {
-  background: #E8E4D9;
+  background: #E4E7D5;
   aspect-ratio: 1 / 1;
   display: flex;
   flex-direction: column;
@@ -1303,7 +1303,7 @@ p {
 
 /* Jobs panel — spans both rows in column 5 */
 .team-cell.team-jobs {
-  background: #DDD9CE;
+  background: #E4E7D5;
   grid-column: 5 / 6;
   grid-row: 1 / 3;
   display: flex;
@@ -1343,7 +1343,7 @@ p {
 
 /* Empty offset cell — matches Hiroshi's row-2 shift */
 .team-cell.team-empty {
-  background: #E8E4D9;
+  background: #E4E7D5;
   aspect-ratio: 1 / 1;
 }
 
