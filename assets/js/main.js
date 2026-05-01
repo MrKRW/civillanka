@@ -81,16 +81,31 @@ const ourWorkCat   = document.querySelector('.our-work-cat');
 
 const ourWorkSwiper = new Swiper('.our-work-swiper', {
   loop: true,
-  speed: 800,
-  autoplay: { delay: 2000, disableOnInteraction: false },
+  speed: 6000,
+  grabCursor: true,
+  autoplay: { 
+    delay: 0, 
+    disableOnInteraction: false 
+  },
   slidesPerView: 'auto',
+  spaceBetween: 0,
+  breakpoints: {
+    768: {
+      spaceBetween: 0
+    },
+    1024: {
+      spaceBetween: 0
+    }
+  },
   navigation: {
     prevEl: '.our-work-prev',
     nextEl: '.our-work-next'
   },
+  observer: true,
+  observeParents: true,
   on: {
     slideChange() {
-      // Find the active slide
+      // Use realIndex for loop mode to get the correct data attributes
       const activeSlide = this.slides[this.activeIndex];
       if (activeSlide && ourWorkTitle && ourWorkCat) {
         ourWorkTitle.textContent = activeSlide.dataset.title || '';
