@@ -510,6 +510,11 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: filter 0.4s ease;
+}
+
+.split-half:hover .split-bg {
+  filter: grayscale(100%);
 }
 
 .filter-dark {
@@ -528,7 +533,7 @@ p {
 }
 
 .split-half:hover .split-overlay {
-  background: var(--black);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .vert-text {
