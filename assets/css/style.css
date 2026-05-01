@@ -348,7 +348,7 @@ p {
   cursor: pointer;
   transition: border-color 0.3s, transform 0.3s, opacity 0.15s;
   pointer-events: all;
-  display: flex;
+  display: none !important;
   align-items: center;
   justify-content: center;
 }
@@ -476,7 +476,7 @@ p {
   cursor: pointer;
   flex-shrink: 0;
   transition: border-color 0.3s, transform 0.3s;
-  display: flex;
+  display: none !important;
   align-items: center;
   justify-content: center;
 }
