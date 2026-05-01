@@ -38,7 +38,7 @@ function updateNavActive(label) {
 }
 
 window.addEventListener('scroll', () => {
-  const pastHero = window.scrollY > hero.offsetHeight * 0.75;
+  const pastHero = window.scrollY > 50;
 
   // Toggle hero-state elements
   sideNav.classList.toggle('hidden', pastHero);

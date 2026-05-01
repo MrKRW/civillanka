@@ -210,7 +210,7 @@ p {
   justify-content: center;
   padding: 0 0 0 90px;
   pointer-events: none;
-  transition: opacity 0.35s var(--ease), transform 0.35s var(--ease);
+  transition: opacity 0.15s var(--ease), transform 0.15s var(--ease);
 }
 
 #side-nav ul {
@@ -287,7 +287,7 @@ p {
   justify-content: space-between;
   padding: 30px 40px;
   pointer-events: none;
-  transition: opacity 0.35s var(--ease);
+  transition: opacity 0.15s var(--ease);
 }
 
 #top-bar.hidden {
@@ -346,7 +346,7 @@ p {
   border: 1.5px solid rgba(255, 255, 255, 0.7);
   background: transparent;
   cursor: pointer;
-  transition: border-color 0.3s, transform 0.3s, opacity 0.35s;
+  transition: border-color 0.3s, transform 0.3s, opacity 0.15s;
   pointer-events: all;
   display: flex;
   align-items: center;
@@ -392,7 +392,7 @@ p {
   /* Hidden by default, slides in on scroll */
   transform: translateY(-100%);
   opacity: 0;
-  transition: transform 0.4s var(--ease), opacity 0.4s var(--ease);
+  transition: transform 0.15s var(--ease), opacity 0.15s var(--ease);
   pointer-events: none;
 }
 
