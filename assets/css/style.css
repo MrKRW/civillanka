@@ -72,32 +72,33 @@ h4,
 h5 {
   font-family: var(--font-h);
   font-weight: 300;
-  line-height: 1.15;
+  line-height: 1.1;
   letter-spacing: -0.02em;
 }
 
 h1 {
-  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  font-size: clamp(3.75rem, 6vw, 5.625rem); /* 60px–90px */
 }
 
 h2 {
-  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-size: clamp(1.875rem, 4vw, 3.125rem); /* 30px–50px */
 }
 
 h3 {
-  font-size: clamp(1.3rem, 2.5vw, 2rem);
+  font-size: clamp(1.2rem, 2vw, 1.75rem); /* ~19px–28px */
 }
 
 p {
   line-height: 1.75;
+  font-size: clamp(0.9375rem, 1.2vw, 1.125rem); /* 15px–18px */
   color: var(--gray-dark);
   font-weight: 300;
 }
 
 .section-label {
   font-family: var(--font-h);
-  font-size: 0.7rem;
-  font-weight: 600;
+  font-size: 0.75rem; /* 12px */
+  font-weight: 500;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--accent);
@@ -446,9 +447,9 @@ p {
 
 .sticky-nav li a {
   font-family: var(--font-h);
-  font-size: 0.82rem;
+  font-size: 0.8125rem; /* 13px */
   font-weight: 300;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
   color: rgba(0, 0, 0, 0.55);
   padding: 0 20px;
   transition: color 0.25s var(--ease);
@@ -640,9 +641,9 @@ p {
 
 .new-section-label {
   font-family: var(--font-b);
-  font-size: 0.75rem;
+  font-size: 0.75rem; /* 12px */
   font-weight: 500;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--black);
   display: block;
@@ -651,16 +652,17 @@ p {
 
 .new-about-heading {
   font-family: var(--font-b);
-  font-size: clamp(2rem, 3.5vw, 2.8rem);
-  font-weight: 400;
-  line-height: 1.2;
+  font-size: clamp(1.875rem, 3.5vw, 3.125rem); /* 30px–50px */
+  font-weight: 300;
+  line-height: 1.15;
   color: var(--black);
   margin-bottom: 2.5rem;
+  letter-spacing: -0.02em;
 }
 
 .new-read-more {
   font-family: var(--font-b);
-  font-size: 0.9rem;
+  font-size: 0.875rem; /* 14px */
   color: var(--black);
   text-decoration: underline;
   text-underline-offset: 4px;
@@ -865,36 +867,33 @@ p {
 
 .our-work-label {
   font-family: var(--font-b);
-  font-size: 0.7rem;
-  letter-spacing: 0.2em;
-  color: #fff;
+  font-size: 0.75rem; /* 12px */
+  letter-spacing: 0.18em;
+  color: #bbb;
   text-transform: uppercase;
-  margin-top: 0;
+  margin-top: 40px;
 }
 
 .our-work-info {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .our-work-title {
   font-family: var(--font-b);
-  font-size: clamp(1.8rem, 3vw, 2.4rem);
-  font-weight: 400;
-  margin-bottom: 0.8rem;
-  color: #ffffff;
-  line-height: 1.2;
-  letter-spacing: 0;
+  font-size: clamp(2.5rem, 4vw, 3.75rem); /* 40px–60px */
+  font-weight: 300;
+  line-height: 1.1;
+  color: #fff;
+  letter-spacing: -0.02em;
 }
 
 .our-work-cat {
   font-family: var(--font-b);
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.25em;
-  color: #cccccc;
+  font-size: 0.75rem; /* 12px */
+  letter-spacing: 0.22em;
+  color: #bbb;
   text-transform: uppercase;
-  display: block;
 }
 
 .our-work-right {
@@ -1031,13 +1030,19 @@ p {
 
 .acc-title {
   writing-mode: vertical-rl;
+  text-orientation: mixed;
   transform: rotate(180deg);
   font-family: var(--font-h);
-  font-size: 2.8rem;
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem); /* ~24px–40px */
   font-weight: 300;
-  color: #111;
+  letter-spacing: 0.06em;
+  color: var(--black);
   white-space: nowrap;
-  letter-spacing: 0.02em;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 30px 0;
+  text-transform: capitalize;
 }
 
 .acc-content {
@@ -1454,24 +1459,24 @@ p {
 
 .testimonial-text {
   font-family: var(--font-h);
-  font-size: clamp(1.3rem, 3vw, 1.9rem);
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem); /* 20px–28px */
   font-weight: 300;
   color: var(--black);
-  line-height: 1.5;
+  line-height: 1.6;
   margin-bottom: 2.5rem;
 }
 
 .testimonial-author {
   font-family: var(--font-h);
-  color: var(--accent);
-  font-size: 0.8rem;
+  color: var(--black);
+  font-size: 0.8125rem; /* 13px */
   letter-spacing: 0.15em;
   text-transform: uppercase;
 }
 
 .testimonial-role {
   color: var(--gray-mid);
-  font-size: 0.75rem;
+  font-size: 0.75rem; /* 12px */
   margin-top: 4px;
 }
 
