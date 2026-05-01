@@ -110,7 +110,10 @@ const testSwiper = new Swiper('.test-swiper', {
   direction: 'horizontal',
   // Removed fade effect for slide transition
   autoplay: { delay: 6000, disableOnInteraction: false },
-  navigation: { prevEl: '.test-prev', nextEl: '.test-next' }
+  pagination: {
+    el: '.test-pagination',
+    clickable: true,
+  }
 });
 
 // ============================
