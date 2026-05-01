@@ -3,9 +3,7 @@
 // ============================
 const sideNav      = document.getElementById('side-nav');
 const topBar       = document.getElementById('top-bar');
-const circleBtn    = document.getElementById('circle-menu-btn');
 const stickyHeader = document.getElementById('sticky-header');
-const stickyCirBtn = document.getElementById('sticky-circle-btn');
 const hero         = document.getElementById('hero');
 
 // Section→nav-label mapping (for active highlight)
@@ -43,7 +41,6 @@ window.addEventListener('scroll', () => {
   // Toggle hero-state elements
   sideNav.classList.toggle('hidden', pastHero);
   topBar.classList.toggle('hidden', pastHero);
-  circleBtn.classList.toggle('hidden', pastHero);
 
   // Toggle sticky header
   stickyHeader.classList.toggle('visible', pastHero);
@@ -63,9 +60,6 @@ const mobileClose  = document.getElementById('mobile-nav-close');
 
 function openMenu()  { mobileNav.classList.add('open'); }
 function closeMenu() { mobileNav.classList.remove('open'); }
-
-circleBtn.addEventListener('click', openMenu);
-stickyCirBtn.addEventListener('click', openMenu);
 mobileClose.addEventListener('click', closeMenu);
 mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
 
