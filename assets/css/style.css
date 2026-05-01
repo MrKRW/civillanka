@@ -1503,17 +1503,23 @@ p {
 =========================== */
 #ref-journal {
   background: #EDE8E2;
-  padding: 100px 0 120px;
+  padding: 80px 0 120px;
+}
+
+/* Container with less padding for larger image feel */
+#ref-journal .container {
+  max-width: 1400px;
+  padding: 0 40px;
 }
 
 /* Remove header styles as it's being removed from HTML */
 
 
-/* 4-column grid */
+/* 4-column grid with smaller gaps */
 .ref-journal-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 50px 30px;
+  gap: 60px 16px;
 }
 
 .ref-journal-card {
@@ -1522,57 +1528,55 @@ p {
 }
 
 .ref-journal-img-wrap {
-  margin-bottom: 24px;
+  margin-bottom: 15px;
   overflow: hidden;
 }
 
 .ref-journal-img-wrap img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
   transition: transform 0.6s var(--ease);
 }
 
 .ref-journal-card:hover .ref-journal-img-wrap img {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
 /* Post content */
 .ref-journal-title {
   font-family: var(--font-b);
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.35;
   color: var(--black);
-  margin-bottom: 16px;
-  max-width: 90%;
+  margin-bottom: 12px;
+  max-width: 95%;
+  letter-spacing: -0.01em;
 }
 
 .ref-journal-meta {
   font-family: var(--font-b);
-  font-size: 0.75rem;
+  font-size: 0.68rem;
   font-weight: 500;
-  color: var(--black);
-  letter-spacing: 0.1em;
+  color: #333;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  margin-top: auto;
-}
-
-.ref-journal-meta span {
-  display: inline-flex;
+  display: flex;
   align-items: center;
 }
 
 .ref-journal-meta-sep {
-  margin: 0 10px;
-  color: var(--gray-mid);
+  margin: 0 20px;
+  color: #aaa;
+  font-weight: 300;
 }
 
-/* Specific heights for the asymmetric look */
-.ref-journal-card:nth-child(1) .ref-journal-img-wrap { aspect-ratio: 4 / 3; }
-.ref-journal-card:nth-child(2) .ref-journal-img-wrap { aspect-ratio: 3 / 4; }
-.ref-journal-card:nth-child(3) .ref-journal-img-wrap { aspect-ratio: 1 / 1; }
-.ref-journal-card:nth-child(4) .ref-journal-img-wrap { aspect-ratio: 3 / 4; }
+/* Specific heights for the asymmetric look — making them taller/larger */
+.ref-journal-card:nth-child(1) .ref-journal-img-wrap { aspect-ratio: 1.4 / 1; }
+.ref-journal-card:nth-child(2) .ref-journal-img-wrap { aspect-ratio: 0.8 / 1; }
+.ref-journal-card:nth-child(3) .ref-journal-img-wrap { aspect-ratio: 1.4 / 1; }
+.ref-journal-card:nth-child(4) .ref-journal-img-wrap { aspect-ratio: 0.8 / 1; }
 
 /* Responsive */
 @media (max-width: 1024px) {
