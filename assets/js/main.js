@@ -199,3 +199,16 @@ if (teamSection) {
   teamObserver.observe(teamSection);
 }
 
+// ============================
+// ABOUT SLIDESHOW
+// ============================
+const aboutSlides = document.querySelectorAll('.about-slide');
+if (aboutSlides.length > 0) {
+  let currentSlide = 0;
+  setInterval(() => {
+    aboutSlides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % aboutSlides.length;
+    aboutSlides[currentSlide].classList.add('active');
+  }, 4000);
+}
+

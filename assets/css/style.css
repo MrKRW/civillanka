@@ -619,20 +619,56 @@ p {
    ABOUT / INTRO
 =========================== */
 #about {
-  background: var(--white) url('../images/sketch-bg.png') no-repeat right 10% bottom 0%;
-  background-size: 60%;
+  background: var(--white) url('../images/sketch-bg.png') no-repeat right 5% center;
+  background-size: 50%;
   background-blend-mode: multiply;
+  overflow: hidden;
 }
 
 .new-about-top {
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
   margin-bottom: 80px;
-  border-bottom: 1px solid #f0f0f0;
-  padding-bottom: 60px;
+  position: relative;
+  min-height: 450px;
 }
 
 .new-about-text {
-  max-width: 75%;
+  flex: 0 0 50%;
+  z-index: 2;
+}
+
+.about-slideshow {
+  flex: 0 0 450px;
+  height: 280px;
+  position: relative;
+  z-index: 3;
+  margin-right: 5%;
+}
+
+.about-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+}
+
+.about-slide.active {
+  opacity: 1;
+}
+
+.about-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  display: block;
 }
 
 .new-section-label {
