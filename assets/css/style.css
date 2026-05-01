@@ -902,11 +902,13 @@ p {
   overflow: hidden;
   position: relative;
   padding-left: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .our-work-swiper {
   width: 100%;
-  height: 100%;
+  height: calc(100% - 60px);
 }
 
 .our-work-slide {
@@ -916,9 +918,6 @@ p {
   overflow: hidden;
 }
 
-.our-work-swiper .swiper-wrapper {
-  transition-timing-function: linear !important;
-}
 
 .our-work-slide img {
   width: 100%;
@@ -929,8 +928,9 @@ p {
 .our-work-nav {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  height: 60px;
   gap: 30px;
-  margin-top: 30px;
   padding-right: 30px;
 }
 
