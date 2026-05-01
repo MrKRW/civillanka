@@ -931,7 +931,7 @@ p {
   align-items: center;
   height: 60px;
   gap: 30px;
-  padding-right: 30px;
+  padding-right: 28%;
 }
 
 .our-work-nav button {
