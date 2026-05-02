@@ -9,12 +9,12 @@
 .hs-hero {
   position: relative;
   width: 100%;
-  height: 70vh;
-  min-height: 480px;
+  height: 100vh;
+  min-height: 600px;
   overflow: hidden;
   display: flex;
-  align-items: flex-end;
-  padding-bottom: 80px;
+  align-items: center; /* Vertically center content */
+  padding: 0;
 }
 
 .hs-hero-bg {
@@ -22,41 +22,126 @@
   inset: 0;
   background-image: url('../../Project%20images/WIN_Facility6.jpg');
   background-size: cover;
-  background-position: center 40%;
+  background-position: center;
   background-repeat: no-repeat;
-  filter: brightness(0.65);
+  filter: brightness(0.45); /* Darker for better contrast */
   transform: scale(1.02);
   transition: transform 8s ease;
 }
 
-.hs-hero:hover .hs-hero-bg {
-  transform: scale(1.05);
+/* New Hero Header */
+.hs-hero-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 40px 80px;
+  z-index: 10;
+}
+
+.hs-hero-logo {
+  font-family: var(--font-b);
+  font-size: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-right: 60px;
+}
+
+.hs-hero-logo .bold {
+  font-weight: 700;
+}
+
+.hs-hero-logo .light {
+  font-weight: 300;
+}
+
+.hs-hero-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+.hs-hero-nav li {
+  display: flex;
+  align-items: center;
+}
+
+.hs-hero-nav li.active::before {
+  content: '';
+  width: 1px;
+  height: 20px;
+  background: #fff;
+  margin-right: 15px;
+}
+
+.hs-hero-nav a {
+  font-family: var(--font-b);
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: 400;
+}
+
+.hs-hero-nav li.active a,
+.hs-hero-nav a:hover {
+  color: #fff;
 }
 
 .hs-hero-content {
   position: relative;
   z-index: 2;
   padding-left: 80px;
+  width: 100%;
 }
 
 .hs-hero-title {
   font-family: var(--font-h);
-  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-size: clamp(3rem, 8vw, 6rem); /* Much larger architectural font */
   font-weight: 300;
   color: #ffffff;
   letter-spacing: -0.02em;
-  line-height: 1.05;
-  margin: 0 0 10px;
+  line-height: 1;
+  margin: 0;
 }
 
-.hs-hero-sub {
-  font-family: var(--font-b);
-  font-size: 0.78rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.65);
-  display: block;
+/* Hero Footer / Tag */
+.hs-hero-footer {
+  position: absolute;
+  bottom: 60px;
+  left: 80px;
+  z-index: 10;
 }
+
+.hs-hero-tag {
+  font-family: var(--font-b);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hs-hero-tag .dot {
+  width: 4px;
+  height: 4px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+/* Hide Global Nav on About Page */
+.about-page #side-nav,
+.about-page #top-bar {
+  display: none !important;
+}
+
 
 /* ============================================================
    SECTION 2 — INTRO TEXT + PHOTO
@@ -653,8 +738,9 @@
    SECTION 10 — CTA STRIP
 ============================================================ */
 .hs-cta {
-  background: #EAEAD8; /* Meadow Mist 936 */
-  padding: 40px 0;
+  background: #EAEAD8;
+  /* Meadow Mist 936 */
+  padding: 50px 0;
 }
 
 .hs-cta-inner {
@@ -684,7 +770,8 @@
   font-size: 0.85rem;
   font-weight: 400;
   letter-spacing: 0.05em;
-  text-transform: lowercase; /* Lowercase as per screenshot */
+  text-transform: lowercase;
+  /* Lowercase as per screenshot */
   color: #111;
   border: 1px solid #111;
   padding: 12px 48px;

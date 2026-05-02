@@ -80,9 +80,30 @@
 ============================================================ -->
   <section id="about-hero" class="hs-hero">
     <div class="hs-hero-bg"></div>
+    
+    <header class="hs-hero-header">
+      <a href="index.html" class="hs-hero-logo">
+        <span class="bold">civilanka</span><span class="light">Architects</span>
+      </a>
+      <nav class="hs-hero-nav">
+        <ul>
+          <li><a href="index.html">home</a></li>
+          <li class="active"><a href="about.php">pages</a></li>
+          <li><a href="index.html#projects">portfolio</a></li>
+          <li><a href="index.html#testimonials">blog</a></li>
+          <li><a href="#footer">shop</a></li>
+        </ul>
+      </nav>
+    </header>
+
     <div class="hs-hero-content">
       <h1 class="hs-hero-title">Our Studio</h1>
-      <span class="hs-hero-sub">a place of architects</span>
+    </div>
+
+    <div class="hs-hero-footer">
+      <div class="hs-hero-tag">
+        <span class="dot"></span> A SENSE OF SERENITY
+      </div>
     </div>
   </section>
 
