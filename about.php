@@ -80,7 +80,7 @@
 ============================================================ -->
   <section id="about-hero" class="hs-hero">
     <div class="hs-hero-bg"></div>
-    
+
     <header class="hs-hero-header">
       <a href="index.html" class="hs-hero-logo">
         <span class="bold">civilanka</span><span class="light">Architects</span>
@@ -113,8 +113,11 @@
   <section class="hs-intro">
     <div class="hs-intro-inner">
       <div class="hs-intro-left reveal-left">
-        <h2 class="hs-intro-heading">Architects and other engineers meeting to improve the learning and collaboration between one another</h2>
-        <p class="hs-intro-body">Our studio is built on the principle that great architecture emerges from collaboration, diverse perspectives, and a shared commitment to excellence. We bring together architects, designers, engineers, and craftspeople who are passionate about creating spaces that inspire and endure.</p>
+        <h2 class="hs-intro-heading">Architects and other engineers meeting to improve the learning and collaboration
+          between one another</h2>
+        <p class="hs-intro-body">Our studio is built on the principle that great architecture emerges from
+          collaboration, diverse perspectives, and a shared commitment to excellence. We bring together architects,
+          designers, engineers, and craftspeople who are passionate about creating spaces that inspire and endure.</p>
       </div>
       <div class="hs-intro-right reveal-right">
         <div class="hs-intro-img-wrap">
@@ -131,17 +134,20 @@
     <div class="hs-approach-inner stagger">
       <div class="hs-approach-col">
         <h3 class="hs-approach-title"><a href="#">Design Your Perfect Home</a></h3>
-        <p>We believe every home should be a reflection of its inhabitants. Through careful listening and deep understanding, we craft residential spaces that are both beautiful and deeply functional.</p>
+        <p>We believe every home should be a reflection of its inhabitants. Through careful listening and deep
+          understanding, we craft residential spaces that are both beautiful and deeply functional.</p>
         <a href="#" class="hs-read-more">read more</a>
       </div>
       <div class="hs-approach-col">
         <h3 class="hs-approach-title">Urban Exteriors</h3>
-        <p>From street-facing facades to public plazas, we design exterior spaces that activate communities and create memorable experiences. Our work respects context while pushing boundaries of the discipline.</p>
+        <p>From street-facing facades to public plazas, we design exterior spaces that activate communities and create
+          memorable experiences. Our work respects context while pushing boundaries of the discipline.</p>
         <a href="#" class="hs-read-more">read more</a>
       </div>
       <div class="hs-approach-col">
         <h3 class="hs-approach-title">Cityscapes Buildings</h3>
-        <p>We create buildings that become landmarks — structures that define skylines and serve as gathering places. Each project is an opportunity to shape how cities evolve and communities connect.</p>
+        <p>We create buildings that become landmarks — structures that define skylines and serve as gathering places.
+          Each project is an opportunity to shape how cities evolve and communities connect.</p>
         <a href="#" class="hs-read-more">read more</a>
       </div>
     </div>
@@ -186,7 +192,8 @@
 ============================================================ -->
   <section class="hs-quote">
     <div class="hs-quote-inner reveal">
-      <p class="hs-quote-text">Our studio is built on the principle that great architecture emerges from collaboration, diverse perspectives, and a shared commitment to excellence. We bring together architects and craftspeople.</p>
+      <p class="hs-quote-text">Our studio is built on the principle that great architecture emerges from collaboration,
+        diverse perspectives, and a shared commitment to excellence. We bring together architects and craftspeople.</p>
       <span class="hs-quote-author">JACOB, OWNER</span>
       <div class="hs-quote-dots">
         <span class="hs-dot active"></span>
@@ -202,7 +209,8 @@
   <section class="hs-banner">
     <div class="hs-banner-bg"></div>
     <div class="hs-banner-content">
-      <h2 class="hs-banner-quote">The whimsical feel of Villa Esther begins with the Neo-Modern gateway in the style of Le Corbusier's Villa Savoye.</h2>
+      <h2 class="hs-banner-quote">The whimsical feel of Villa Esther begins with the Neo-Modern gateway in the style of
+        Le Corbusier's Villa Savoye.</h2>
     </div>
   </section>
 
@@ -212,23 +220,23 @@
   <section class="hs-stats">
     <div class="hs-stats-inner">
       <div class="hs-stat-item reveal">
-        <span class="hs-stat-num">24</span>
-        <span class="hs-stat-label">Projects<br>Completed</span>
+        <span class="hs-stat-num">5</span>
+        <span class="hs-stat-label">Local</span>
       </div>
       <div class="hs-stat-divider"></div>
       <div class="hs-stat-item reveal">
-        <span class="hs-stat-num">12</span>
-        <span class="hs-stat-label">Design<br>Awards</span>
+        <span class="hs-stat-num">200+</span>
+        <span class="hs-stat-label">International</span>
       </div>
       <div class="hs-stat-divider"></div>
       <div class="hs-stat-item reveal">
-        <span class="hs-stat-num">8</span>
-        <span class="hs-stat-label">Years of<br>Practice</span>
-      </div>
-      <div class="hs-stat-divider"></div>
-      <div class="hs-stat-item reveal">
-        <span class="hs-stat-num">40+</span>
+        <span class="hs-stat-num">200+</span>
         <span class="hs-stat-label">Happy<br>Clients</span>
+      </div>
+      <div class="hs-stat-divider"></div>
+      <div class="hs-stat-item reveal">
+        <span class="hs-stat-num">10</span>
+        <span class="hs-stat-label">Years of<br>Practice</span>
       </div>
       <div class="hs-stat-nav">
         <button aria-label="Previous stat">&#8592;</button>
@@ -244,7 +252,8 @@
     <div class="hs-founders-inner">
       <div class="hs-founders-text reveal-left">
         <h2 class="hs-founders-heading">Meet our Architects:<br>Jacob and Maria</h2>
-        <p>Our founding partners bring together decades of experience and a shared vision for architecture that is both beautiful and functional. They lead every project with passion and a commitment to timeless excellence.</p>
+        <p>Our founding partners bring together decades of experience and a shared vision for architecture that is both
+          beautiful and functional. They lead every project with passion and a commitment to timeless excellence.</p>
         <a href="#footer" class="hs-read-more" style="margin-top:2rem;display:inline-block;">Work with us</a>
       </div>
       <div class="hs-founders-photos">
@@ -334,7 +343,8 @@
 ============================================================ -->
   <section class="hs-cta">
     <div class="hs-cta-inner reveal">
-      <p class="hs-cta-text">Lorem ipsum dolor sit amet, cons tetur adip scing elit. Praesent accumsan libero ac ullamcorper ultrices. Duis nec ante et risus pretium laoreet. Aenean porta, massa eget luctus</p>
+      <p class="hs-cta-text">Lorem ipsum dolor sit amet, cons tetur adip scing elit. Praesent accumsan libero ac
+        ullamcorper ultrices. Duis nec ante et risus pretium laoreet. Aenean porta, massa eget luctus</p>
       <a href="#footer" class="hs-cta-btn">contact us</a>
     </div>
   </section>
