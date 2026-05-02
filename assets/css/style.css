@@ -544,6 +544,27 @@ p {
   color: var(--white);
   letter-spacing: 0.1em;
   text-transform: lowercase;
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.3s var(--ease);
+}
+
+.vert-text::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 1px;
+  background: var(--white);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.vert-text:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .vert-left {
