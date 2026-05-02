@@ -13,7 +13,8 @@
   min-height: 600px;
   overflow: hidden;
   display: flex;
-  align-items: center; /* Vertically center content */
+  align-items: center;
+  /* Vertically center content */
   padding: 0;
 }
 
@@ -24,7 +25,8 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  filter: brightness(0.45); /* Darker for better contrast */
+  filter: brightness(0.45);
+  /* Darker for better contrast */
   transform: scale(1.02);
   transition: transform 8s ease;
 }
@@ -102,7 +104,8 @@
 
 .hs-hero-title {
   font-family: var(--font-h);
-  font-size: clamp(3rem, 8vw, 6rem); /* Much larger architectural font */
+  font-size: clamp(3rem, 8vw, 6rem);
+  /* Much larger architectural font */
   font-weight: 300;
   color: #ffffff;
   letter-spacing: -0.02em;
@@ -136,8 +139,7 @@
   border-radius: 50%;
 }
 
-/* Hide Global Nav on About Page */
-.about-page #side-nav,
+/* Hide Global Top Bar on About Page (using hs-hero-header instead) */
 .about-page #top-bar {
   display: none !important;
 }

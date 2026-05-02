@@ -55,19 +55,6 @@
   </nav>
 
   <!-- ============================================================
-     LEFT VERTICAL NAV
-============================================================ -->
-  <nav id="side-nav" role="navigation" aria-label="Primary Navigation">
-    <ul>
-      <li><a href="index.html#hero">home</a></li>
-      <li class="active"><a href="about.php">about</a></li>
-      <li><a href="index.html#services">pages</a></li>
-      <li><a href="index.html#projects">portfolio</a></li>
-      <li><a href="#footer">contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- ============================================================
      TOP BAR
 ============================================================ -->
   <div id="top-bar" aria-label="Site header">

@@ -203,83 +203,6 @@ p {
 }
 
 /* ===========================
-   LEFT VERTICAL NAV (hero state only)
-=========================== */
-#side-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 0 0 90px;
-  pointer-events: none;
-  transition: opacity 0.15s var(--ease), transform 0.15s var(--ease);
-}
-
-#side-nav ul {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  pointer-events: all;
-}
-
-#side-nav ul li {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-/* Active pipe indicator */
-#side-nav ul li.active::before {
-  content: '|';
-  color: var(--white);
-  font-size: 1.4rem;
-  font-weight: 200;
-  margin-right: 15px;
-  margin-top: -3px;
-  transition: opacity 0.3s;
-}
-
-#side-nav ul li:not(.active)::before {
-  content: '|';
-  color: transparent;
-  font-size: 1.4rem;
-  margin-right: 15px;
-}
-
-#side-nav ul li a {
-  font-family: var(--font-h);
-  font-size: 1.25rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  color: var(--white);
-  transition: color 0.3s var(--ease), text-shadow 0.3s;
-  line-height: 1;
-  text-transform: lowercase;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-}
-
-#side-nav ul li.active a {
-  color: var(--white);
-  font-weight: 800;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
-}
-
-#side-nav ul li a:hover {
-  color: var(--white);
-}
-
-/* Hide side-nav when scrolled past hero */
-#side-nav.hidden {
-  opacity: 0;
-  transform: translateX(-20px);
-  pointer-events: none;
-}
-
-/* ===========================
    TOP BAR — hero state (left aligned logo)
 =========================== */
 #top-bar {
@@ -598,8 +521,9 @@ p {
   max-width: 280px;
   height: auto;
   display: block;
-  /* filter: brightness(0) invert(85%) sepia(20%) saturate(350%) hue-rotate(350deg); */
-  /* opacity: 0.95; */
+  /* Meadow Mist 936 (#EAEAD8) color filter */
+  filter: brightness(0) invert(92%) sepia(10%) saturate(400%) hue-rotate(30deg);
+  opacity: 1;
 }
 
 @media (max-width: 900px) {

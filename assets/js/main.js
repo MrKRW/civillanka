@@ -1,10 +1,11 @@
 // ============================
 // ELEMENT REFS
 // ============================
-const sideNav = document.getElementById('side-nav');
+
 const topBar = document.getElementById('top-bar');
 const stickyHeader = document.getElementById('sticky-header');
 const hero = document.getElementById('hero');
+const backTop = document.getElementById('back-top');
 
 // Section→nav-label mapping (for active highlight)
 const sectionMap = [
@@ -25,10 +26,6 @@ function getActiveSection() {
 }
 
 function updateNavActive(label) {
-  // side-nav
-  sideNav.querySelectorAll('li').forEach(li => {
-    li.classList.toggle('active', li.querySelector('a').textContent.trim() === label);
-  });
   // sticky-nav
   stickyHeader.querySelectorAll('.sticky-nav li').forEach(li => {
     li.classList.toggle('active', li.querySelector('a').textContent.trim() === label);
@@ -39,7 +36,7 @@ window.addEventListener('scroll', () => {
   const pastHero = window.scrollY > 50;
 
   // Toggle hero-state elements
-  sideNav.classList.toggle('hidden', pastHero);
+
   topBar.classList.toggle('hidden', pastHero);
 
   // Toggle sticky header
@@ -62,11 +59,9 @@ function openMenu() { mobileNav.classList.add('open'); }
 function closeMenu() { mobileNav.classList.remove('open'); }
 mobileClose.addEventListener('click', closeMenu);
 mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
-
 // ============================
 // BACK TO TOP
 // ============================
-const backTop = document.getElementById('back-top');
 backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
 // ============================
