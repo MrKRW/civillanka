@@ -540,27 +540,38 @@
    SECTION 9 — TEAM GRID (2×2)
 ============================================================ */
 .hs-team {
-  background: #f5f4f1;
+  background: #ffffff;
   padding: 80px 0;
 }
 
 .hs-team-grid {
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 0 80px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0;
+  gap: 0 40px;
+  /* Vertical gap handled by margins/padding */
 }
 
 .hs-team-card {
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  border: 1px solid rgba(0, 0, 0, 0.07);
   background: #ffffff;
-  transition: box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
+  height: 225px;
+}
+
+/* Row separator line */
+.hs-team-card:nth-child(1),
+.hs-team-card:nth-child(2) {
+  border-bottom: 1px solid #e8e6e1;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  height: 265px;
+  /* height + padding */
 }
 
 .hs-team-card:hover {
@@ -568,7 +579,8 @@
 }
 
 .hs-tc-photo {
-  flex: 0 0 160px;
+  flex: 0 0 300px;
+  /* Increased width to match reference */
   overflow: hidden;
 }
 
@@ -576,9 +588,9 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top center;
+  object-position: center;
   filter: grayscale(100%);
-  transition: transform 0.5s ease, filter 0.4s ease;
+  transition: transform 0.6s ease, filter 0.4s ease;
 }
 
 .hs-team-card:hover .hs-tc-photo img {
@@ -596,27 +608,39 @@
 
 .hs-tc-name {
   font-family: var(--font-b);
-  font-size: 1.05rem;
+  font-size: 1.3rem;
+  /* Larger font as per screenshot */
   font-weight: 500;
   color: #111;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   letter-spacing: -0.01em;
 }
 
 .hs-tc-role {
   font-family: var(--font-b);
-  font-size: 0.7rem;
-  letter-spacing: 0.14em;
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #999;
-  margin-bottom: 18px;
-  font-weight: 400;
+  color: #555;
+  /* Slightly darker than before */
+  margin-bottom: 24px;
+  font-weight: 500;
 }
 
 .hs-tc-socials {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 18px;
+}
+
+.hs-tc-socials a {
+  color: #000;
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+}
+
+.hs-tc-socials a:hover {
+  transform: translateY(-2px);
 }
 
 .hs-stars {
@@ -629,42 +653,43 @@
    SECTION 10 — CTA STRIP
 ============================================================ */
 .hs-cta {
-  background: #f0ece6;
-  padding: 80px 0;
+  background: #EAEAD8; /* Meadow Mist 936 */
+  padding: 40px 0;
 }
 
 .hs-cta-inner {
-  max-width: 900px;
+  max-width: 1500px;
   margin: 0 auto;
-  padding: 0 80px;
+  padding: 0 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 60px;
+  gap: 80px;
 }
 
 .hs-cta-text {
-  font-family: var(--font-h);
-  font-size: clamp(1rem, 1.6vw, 1.3rem);
-  font-weight: 300;
-  color: #222;
-  line-height: 1.65;
+  font-family: var(--font-b);
+  font-size: 0.98rem;
+  font-weight: 380;
+  color: #111;
+  line-height: 1.6;
   flex: 1;
+  max-width: 800px;
 }
 
 .hs-cta-btn {
   flex-shrink: 0;
   display: inline-block;
-  font-family: var(--font-h);
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
+  font-family: var(--font-b);
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: lowercase; /* Lowercase as per screenshot */
   color: #111;
   border: 1px solid #111;
-  padding: 14px 32px;
+  padding: 12px 48px;
   text-decoration: none;
-  transition: background 0.3s, color 0.3s;
+  transition: all 0.3s ease;
 }
 
 .hs-cta-btn:hover {

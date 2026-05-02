@@ -15,6 +15,9 @@
     href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap"
     rel="stylesheet" />
 
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/about.css" />
@@ -243,13 +246,15 @@
       <!-- Row 1 -->
       <div class="hs-team-card">
         <div class="hs-tc-photo">
-          <img src="team%20images/32.png" alt="Robert Johnson" />
+          <img src="team%20images/32.png" alt="Robert Jhonson" />
         </div>
         <div class="hs-tc-info">
-          <h3 class="hs-tc-name">Robert Johnson</h3>
-          <p class="hs-tc-role">Senior Architect</p>
+          <h3 class="hs-tc-name">Robert Jhonson</h3>
+          <p class="hs-tc-role">CEO / ARCHITECT</p>
           <div class="hs-tc-socials">
-            <span class="hs-stars">&#9733; &#9733; &#9733;</span>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
           </div>
         </div>
       </div>
@@ -260,9 +265,11 @@
         </div>
         <div class="hs-tc-info">
           <h3 class="hs-tc-name">Aida Belul</h3>
-          <p class="hs-tc-role">Senior Architect</p>
+          <p class="hs-tc-role">MAIN CONTRACTOR</p>
           <div class="hs-tc-socials">
-            <span class="hs-stars">&#9733; &#9733; &#9733;</span>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
           </div>
         </div>
       </div>
@@ -270,13 +277,15 @@
       <!-- Row 2 -->
       <div class="hs-team-card">
         <div class="hs-tc-photo">
-          <img src="team%20images/29.png" alt="Rebecca Vates" />
+          <img src="team%20images/29.png" alt="Rebecca Wales" />
         </div>
         <div class="hs-tc-info">
-          <h3 class="hs-tc-name">Rebecca Vates</h3>
-          <p class="hs-tc-role">Architect</p>
+          <h3 class="hs-tc-name">Rebecca Wales</h3>
+          <p class="hs-tc-role">ARCHITECT</p>
           <div class="hs-tc-socials">
-            <span class="hs-stars">&#9733; &#9733; &#9733;</span>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
           </div>
         </div>
       </div>
@@ -287,9 +296,11 @@
         </div>
         <div class="hs-tc-info">
           <h3 class="hs-tc-name">Jasmin Dorothy</h3>
-          <p class="hs-tc-role">Architect</p>
+          <p class="hs-tc-role">PRODUCT DESIGNER</p>
           <div class="hs-tc-socials">
-            <span class="hs-stars">&#9733; &#9733; &#9733;</span>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
           </div>
         </div>
       </div>
@@ -302,8 +313,8 @@
 ============================================================ -->
   <section class="hs-cta">
     <div class="hs-cta-inner reveal">
-      <p class="hs-cta-text">Our studio is built on the principle that great architecture emerges from collaboration. If you share our passion for thoughtful design, we'd love to hear from you.</p>
-      <a href="#footer" class="hs-cta-btn">Contact Us</a>
+      <p class="hs-cta-text">Lorem ipsum dolor sit amet, cons tetur adip scing elit. Praesent accumsan libero ac ullamcorper ultrices. Duis nec ante et risus pretium laoreet. Aenean porta, massa eget luctus</p>
+      <a href="#footer" class="hs-cta-btn">contact us</a>
     </div>
   </section>
 
