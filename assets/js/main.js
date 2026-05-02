@@ -1,18 +1,18 @@
 // ============================
 // ELEMENT REFS
 // ============================
-const sideNav      = document.getElementById('side-nav');
-const topBar       = document.getElementById('top-bar');
+const sideNav = document.getElementById('side-nav');
+const topBar = document.getElementById('top-bar');
 const stickyHeader = document.getElementById('sticky-header');
-const hero         = document.getElementById('hero');
+const hero = document.getElementById('hero');
 
 // Section→nav-label mapping (for active highlight)
 const sectionMap = [
-  { id: 'hero',         label: 'home'      },
-  { id: 'about',        label: 'about'     },
-  { id: 'services',     label: 'pages'     },
-  { id: 'projects',     label: 'portfolio' },
-  { id: 'footer',       label: 'contact'   },
+  { id: 'hero', label: 'home' },
+  { id: 'about', label: 'about' },
+  { id: 'services', label: 'pages' },
+  { id: 'projects', label: 'portfolio' },
+  { id: 'footer', label: 'contact' },
 ];
 
 function getActiveSection() {
@@ -55,10 +55,10 @@ window.addEventListener('scroll', () => {
 // ============================
 // MOBILE NAV (both circle buttons open it)
 // ============================
-const mobileNav    = document.getElementById('mobile-nav');
-const mobileClose  = document.getElementById('mobile-nav-close');
+const mobileNav = document.getElementById('mobile-nav');
+const mobileClose = document.getElementById('mobile-nav-close');
 
-function openMenu()  { mobileNav.classList.add('open'); }
+function openMenu() { mobileNav.classList.add('open'); }
 function closeMenu() { mobileNav.classList.remove('open'); }
 mobileClose.addEventListener('click', closeMenu);
 mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
@@ -77,15 +77,15 @@ backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smo
 // OUR WORK SWIPER
 // ============================
 const ourWorkTitle = document.querySelector('.our-work-title');
-const ourWorkCat   = document.querySelector('.our-work-cat');
+const ourWorkCat = document.querySelector('.our-work-cat');
 
 const ourWorkSwiper = new Swiper('.our-work-swiper', {
   loop: true,
   speed: 800,
   grabCursor: true,
-  autoplay: { 
-    delay: 2000, 
-    disableOnInteraction: false 
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false
   },
   slidesPerView: 'auto',
   spaceBetween: 30,
@@ -109,7 +109,7 @@ const ourWorkSwiper = new Swiper('.our-work-swiper', {
       const activeSlide = this.slides[this.activeIndex];
       if (activeSlide && ourWorkTitle && ourWorkCat) {
         ourWorkTitle.textContent = activeSlide.dataset.title || '';
-        ourWorkCat.textContent   = activeSlide.dataset.cat   || '';
+        ourWorkCat.textContent = activeSlide.dataset.cat || '';
       }
     }
   }
@@ -135,7 +135,7 @@ const testSwiper = new Swiper('.test-swiper', {
 // HORIZONTAL ACCORDION
 // ============================
 const accHeaders = document.querySelectorAll('.acc-header');
-const accCloses  = document.querySelectorAll('.acc-close');
+const accCloses = document.querySelectorAll('.acc-close');
 
 accHeaders.forEach(header => {
   header.addEventListener('click', () => {
@@ -143,14 +143,14 @@ accHeaders.forEach(header => {
     document.querySelectorAll('.acc-item').forEach(item => {
       item.classList.remove('active');
       const icon = item.querySelector('.acc-icon');
-      if(icon) icon.innerHTML = '+';
+      if (icon) icon.innerHTML = '+';
     });
-    
+
     // Add active to clicked item
     const parentItem = header.parentElement;
     parentItem.classList.add('active');
     const activeIcon = parentItem.querySelector('.acc-icon');
-    if(activeIcon) activeIcon.innerHTML = '&minus;';
+    if (activeIcon) activeIcon.innerHTML = '&minus;';
   });
 });
 
@@ -161,7 +161,7 @@ accCloses.forEach(closeBtn => {
     if (parentItem) {
       parentItem.classList.remove('active');
       const icon = parentItem.querySelector('.acc-icon');
-      if(icon) icon.innerHTML = '+';
+      if (icon) icon.innerHTML = '+';
     }
   });
 });
