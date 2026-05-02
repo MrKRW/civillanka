@@ -77,27 +77,32 @@ h5 {
 }
 
 h1 {
-  font-size: clamp(3.75rem, 6vw, 5.625rem); /* 60px–90px */
+  font-size: clamp(3.75rem, 6vw, 5.625rem);
+  /* 60px–90px */
 }
 
 h2 {
-  font-size: clamp(1.875rem, 4vw, 3.125rem); /* 30px–50px */
+  font-size: clamp(1.875rem, 4vw, 3.125rem);
+  /* 30px–50px */
 }
 
 h3 {
-  font-size: clamp(1.2rem, 2vw, 1.75rem); /* ~19px–28px */
+  font-size: clamp(1.2rem, 2vw, 1.75rem);
+  /* ~19px–28px */
 }
 
 p {
   line-height: 1.75;
-  font-size: clamp(0.9375rem, 1.2vw, 1.125rem); /* 15px–18px */
+  font-size: clamp(0.9375rem, 1.2vw, 1.125rem);
+  /* 15px–18px */
   color: var(--gray-dark);
   font-weight: 300;
 }
 
 .section-label {
   font-family: var(--font-h);
-  font-size: 0.75rem; /* 12px */
+  font-size: 0.75rem;
+  /* 12px */
   font-weight: 500;
   letter-spacing: 0.25em;
   text-transform: uppercase;
@@ -447,7 +452,8 @@ p {
 
 .sticky-nav li a {
   font-family: var(--font-h);
-  font-size: 0.8125rem; /* 13px */
+  font-size: 0.8125rem;
+  /* 13px */
   font-weight: 300;
   letter-spacing: 0.04em;
   color: rgba(0, 0, 0, 0.55);
@@ -678,7 +684,7 @@ p {
   height: 100%;
   opacity: 0;
   transition: opacity 1.5s ease-in-out;
-  box-shadow: 0 40px 80px rgba(0,0,0,0.15);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.15);
 }
 
 .about-slide.active {
@@ -695,7 +701,8 @@ p {
 
 .new-section-label {
   font-family: var(--font-b);
-  font-size: 0.8125rem; /* 13px */
+  font-size: 0.8125rem;
+  /* 13px */
   font-weight: 500;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -913,7 +920,8 @@ p {
 
 .our-work-label {
   font-family: var(--font-b);
-  font-size: 0.75rem; /* 12px */
+  font-size: 0.75rem;
+  /* 12px */
   letter-spacing: 0.18em;
   color: #bbb;
   text-transform: uppercase;
@@ -927,7 +935,8 @@ p {
 
 .our-work-title {
   font-family: var(--font-b);
-  font-size: clamp(2.5rem, 4vw, 3.75rem); /* 40px–60px */
+  font-size: clamp(2.5rem, 4vw, 3.75rem);
+  /* 40px–60px */
   font-weight: 300;
   line-height: 1.1;
   color: #fff;
@@ -936,7 +945,8 @@ p {
 
 .our-work-cat {
   font-family: var(--font-b);
-  font-size: 0.75rem; /* 12px */
+  font-size: 0.75rem;
+  /* 12px */
   letter-spacing: 0.22em;
   color: #bbb;
   text-transform: uppercase;
@@ -989,7 +999,8 @@ p {
   font-family: var(--font-b);
   opacity: 0.8;
   transition: opacity 0.3s;
-  letter-spacing: -2px; /* To make arrows look longer if they are just characters */
+  letter-spacing: -2px;
+  /* To make arrows look longer if they are just characters */
 }
 
 .our-work-nav button:hover {
@@ -1064,7 +1075,8 @@ p {
   text-orientation: mixed;
   transform: rotate(180deg);
   font-family: var(--font-h);
-  font-size: clamp(1.5rem, 2.5vw, 2.5rem); /* ~24px–40px */
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  /* ~24px–40px */
   font-weight: 300;
   letter-spacing: 0.06em;
   color: var(--black);
@@ -1080,8 +1092,10 @@ p {
 .acc-title::after {
   content: '';
   position: absolute;
-  top: 15%; /* Center it slightly against the text */
-  right: -12px; /* Position it parallel to the vertical text */
+  top: 15%;
+  /* Center it slightly against the text */
+  right: -12px;
+  /* Position it parallel to the vertical text */
   width: 1px;
   height: 0;
   background-color: var(--black);
@@ -1089,7 +1103,8 @@ p {
 }
 
 .acc-header:hover .acc-title::after {
-  height: 70%; /* Grows to cover most of the text length */
+  height: 70%;
+  /* Grows to cover most of the text length */
 }
 
 /* If active, keep the line visible */
@@ -1511,7 +1526,8 @@ p {
 
 .testimonial-text {
   font-family: var(--font-h);
-  font-size: clamp(1.25rem, 2.5vw, 1.75rem); /* 20px–28px */
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  /* 20px–28px */
   font-weight: 300;
   color: var(--black);
   line-height: 1.6;
@@ -1521,14 +1537,16 @@ p {
 .testimonial-author {
   font-family: var(--font-h);
   color: var(--black);
-  font-size: 0.8125rem; /* 13px */
+  font-size: 0.8125rem;
+  /* 13px */
   letter-spacing: 0.15em;
   text-transform: uppercase;
 }
 
 .testimonial-role {
   color: var(--gray-mid);
-  font-size: 0.75rem; /* 12px */
+  font-size: 0.75rem;
+  /* 12px */
   margin-top: 4px;
 }
 
@@ -1632,10 +1650,21 @@ p {
 }
 
 /* Specific heights for the asymmetric look — making them taller/larger */
-.ref-journal-card:nth-child(1) .ref-journal-img-wrap { aspect-ratio: 1.4 / 1; }
-.ref-journal-card:nth-child(2) .ref-journal-img-wrap { aspect-ratio: 0.8 / 1; }
-.ref-journal-card:nth-child(3) .ref-journal-img-wrap { aspect-ratio: 1.4 / 1; }
-.ref-journal-card:nth-child(4) .ref-journal-img-wrap { aspect-ratio: 0.8 / 1; }
+.ref-journal-card:nth-child(1) .ref-journal-img-wrap {
+  aspect-ratio: 1.4 / 1;
+}
+
+.ref-journal-card:nth-child(2) .ref-journal-img-wrap {
+  aspect-ratio: 0.8 / 1;
+}
+
+.ref-journal-card:nth-child(3) .ref-journal-img-wrap {
+  aspect-ratio: 1.4 / 1;
+}
+
+.ref-journal-card:nth-child(4) .ref-journal-img-wrap {
+  aspect-ratio: 0.8 / 1;
+}
 
 /* Responsive */
 @media (max-width: 1024px) {
@@ -1650,6 +1679,7 @@ p {
     align-items: flex-start;
     gap: 30px;
   }
+
   .ref-journal-nav {
     flex-wrap: wrap;
     gap: 20px;
