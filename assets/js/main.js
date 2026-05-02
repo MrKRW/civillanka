@@ -88,6 +88,10 @@ const ourWorkCat   = document.querySelector('.our-work-cat');
 const ourWorkSwiper = new Swiper('.our-work-swiper', {
   loop: true,
   speed: 800,
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true
+  },
   slidesPerView: 'auto',
   navigation: {
     prevEl: '.our-work-prev',

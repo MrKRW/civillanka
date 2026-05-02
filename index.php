@@ -36,7 +36,7 @@
     <!-- Nav center -->
     <ul class="sticky-nav" role="list">
       <li class="active"><a href="#hero">home</a></li>
-      <li><a href="#about">about</a></li>
+      <li><a href="about.php">about</a></li>
       <li><a href="#services">pages</a></li>
       <li><a href="#projects">portfolio</a></li>
       <li><a href="#footer">contact</a></li>
@@ -52,7 +52,7 @@
 ============================================================ -->
   <nav id="mobile-nav" role="navigation" aria-label="Mobile Navigation">
     <button id="mobile-nav-close" aria-label="Close menu">&#x2715;</button>
-    <a href="#about">about</a>
+    <a href="about.php">about</a>
     <a href="#services">pages</a>
     <a href="#projects">portfolio</a>
     <a href="#testimonials">journal</a>
@@ -65,7 +65,7 @@
   <nav id="side-nav" role="navigation" aria-label="Primary Navigation">
     <ul>
       <li class="active"><a href="#hero">home</a></li>
-      <li><a href="#about">about</a></li>
+      <li><a href="about.php">about</a></li>
       <li><a href="#services">pages</a></li>
       <li><a href="#projects">portfolio</a></li>
       <li><a href="#footer">contact</a></li>
@@ -524,7 +524,7 @@
         <div class="footer-col">
           <h4>Navigation</h4>
           <ul>
-            <li><a href="#about">About</a></li>
+            <li><a href="about.php">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#testimonials">Journal</a></li>
