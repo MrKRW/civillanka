@@ -476,46 +476,50 @@
 ============================================================ */
 .hs-founders {
   background: #ffffff;
-  padding: 100px 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .hs-founders-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 80px;
+  max-width: 100%;
+  margin: 0;
+  padding: 0 0 0 100px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2.5fr;
   gap: 80px;
   align-items: center;
+  width: 100%;
 }
 
 .hs-founders-heading {
   font-family: var(--font-h);
-  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
   font-weight: 300;
   color: #111;
-  line-height: 1.25;
+  line-height: 1.15;
   letter-spacing: -0.02em;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 
 .hs-founders-text p {
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   line-height: 1.8;
   color: #555;
   font-weight: 300;
-  max-width: 420px;
+  max-width: 480px;
 }
 
 .hs-founders-photos {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: 10px;
 }
 
 .hs-founder-photo {
   overflow: hidden;
-  aspect-ratio: 2 / 2.8;
+  height: 100vh;
 }
 
 .hs-founder-photo img {
@@ -785,6 +789,7 @@
    RESPONSIVE
 ============================================================ */
 @media (max-width: 1024px) {
+
   .hs-intro-inner,
   .hs-founders-inner {
     grid-template-columns: 1fr;
