@@ -29,16 +29,16 @@
 ============================================================ -->
   <header id="sticky-header" role="banner" aria-label="Sticky Navigation">
     <!-- Logo left -->
-    <a href="index.php" class="sticky-logo" aria-label="Civilanka Home">
+    <a href="index.html" class="sticky-logo" aria-label="Civilanka Home">
       <img src="Logos/sharedImage%20-%20Copy.PNG" alt="Civilanka Architects" class="logo-img logo-img--sticky" />
     </a>
 
     <!-- Nav center -->
     <ul class="sticky-nav" role="list">
-      <li><a href="index.php#hero">home</a></li>
+      <li><a href="index.html#hero">home</a></li>
       <li class="active"><a href="about.php">about</a></li>
-      <li><a href="index.php#services">pages</a></li>
-      <li><a href="index.php#projects">portfolio</a></li>
+      <li><a href="index.html#services">pages</a></li>
+      <li><a href="index.html#projects">portfolio</a></li>
       <li><a href="#footer">contact</a></li>
     </ul>
 
@@ -52,10 +52,10 @@
 ============================================================ -->
   <nav id="mobile-nav" role="navigation" aria-label="Mobile Navigation">
     <button id="mobile-nav-close" aria-label="Close menu">&#x2715;</button>
-    <a href="index.php#about">about</a>
-    <a href="index.php#services">pages</a>
-    <a href="index.php#projects">portfolio</a>
-    <a href="index.php#testimonials">journal</a>
+    <a href="index.html#about">about</a>
+    <a href="index.html#services">pages</a>
+    <a href="index.html#projects">portfolio</a>
+    <a href="index.html#testimonials">journal</a>
     <a href="#footer">contact</a>
   </nav>
 
@@ -64,10 +64,10 @@
 ============================================================ -->
   <nav id="side-nav" role="navigation" aria-label="Primary Navigation">
     <ul>
-      <li><a href="index.php#hero">home</a></li>
+      <li><a href="index.html#hero">home</a></li>
       <li class="active"><a href="about.php">about</a></li>
-      <li><a href="index.php#services">pages</a></li>
-      <li><a href="index.php#projects">portfolio</a></li>
+      <li><a href="index.html#services">pages</a></li>
+      <li><a href="index.html#projects">portfolio</a></li>
       <li><a href="#footer">contact</a></li>
     </ul>
   </nav>
@@ -331,7 +331,7 @@
       <div class="footer-grid">
 
         <div class="footer-brand">
-          <a href="index.php" aria-label="Civilanka Home">
+          <a href="index.html" aria-label="Civilanka Home">
             <img src="assets/images/logo-transparent.png" alt="Civilanka" class="logo-img logo-img--footer" />
           </a>
           <p>An architecture and design studio dedicated to creating spaces of enduring beauty and purpose.</p>
@@ -341,9 +341,9 @@
           <h4>Navigation</h4>
           <ul>
             <li><a href="about.php">About</a></li>
-            <li><a href="index.php#services">Services</a></li>
-            <li><a href="index.php#projects">Projects</a></li>
-            <li><a href="index.php#testimonials">Journal</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#testimonials">Journal</a></li>
             <li><a href="#footer">Contact</a></li>
           </ul>
         </div>
@@ -351,10 +351,10 @@
         <div class="footer-col">
           <h4>Services</h4>
           <ul>
-            <li><a href="index.php#services">Architectural Design</a></li>
-            <li><a href="index.php#services">Interior Architecture</a></li>
-            <li><a href="index.php#services">Urban Planning</a></li>
-            <li><a href="index.php#services">Landscape Design</a></li>
+            <li><a href="index.html#services">Architectural Design</a></li>
+            <li><a href="index.html#services">Interior Architecture</a></li>
+            <li><a href="index.html#services">Urban Planning</a></li>
+            <li><a href="index.html#services">Landscape Design</a></li>
           </ul>
         </div>
 
