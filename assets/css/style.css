@@ -1021,21 +1021,9 @@ p {
   background: #fcfcfc;
 }
 
+/* Remove the old header line logic to replace with title underline */
 .acc-header::before {
-  content: '';
-  position: absolute;
-  top: 85px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1px;
-  height: 0;
-  background-color: #111;
-  transition: height 0.4s cubic-bezier(0.4, 0, 0, 1);
-  pointer-events: none;
-}
-
-.acc-item:not(.active) .acc-header:hover::before {
-  height: 60px;
+  display: none;
 }
 
 .acc-icon {
@@ -1065,6 +1053,27 @@ p {
   align-items: center;
   padding: 30px 0;
   text-transform: capitalize;
+  position: relative;
+}
+
+.acc-title::after {
+  content: '';
+  position: absolute;
+  top: 15%; /* Center it slightly against the text */
+  right: -12px; /* Position it parallel to the vertical text */
+  width: 1px;
+  height: 0;
+  background-color: var(--black);
+  transition: height 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.acc-header:hover .acc-title::after {
+  height: 70%; /* Grows to cover most of the text length */
+}
+
+/* If active, keep the line visible */
+.acc-item.active .acc-title::after {
+  height: 70%;
 }
 
 .acc-content {
