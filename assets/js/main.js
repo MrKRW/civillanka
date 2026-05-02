@@ -3,9 +3,7 @@
 // ============================
 const sideNav      = document.getElementById('side-nav');
 const topBar       = document.getElementById('top-bar');
-const circleBtn    = document.getElementById('circle-menu-btn');
 const stickyHeader = document.getElementById('sticky-header');
-const stickyCirBtn = document.getElementById('sticky-circle-btn');
 const hero         = document.getElementById('hero');
 
 // Section→nav-label mapping (for active highlight)
@@ -38,12 +36,11 @@ function updateNavActive(label) {
 }
 
 window.addEventListener('scroll', () => {
-  const pastHero = window.scrollY > hero.offsetHeight * 0.75;
+  const pastHero = window.scrollY > 50;
 
   // Toggle hero-state elements
   sideNav.classList.toggle('hidden', pastHero);
   topBar.classList.toggle('hidden', pastHero);
-  circleBtn.classList.toggle('hidden', pastHero);
 
   // Toggle sticky header
   stickyHeader.classList.toggle('visible', pastHero);
@@ -63,9 +60,6 @@ const mobileClose  = document.getElementById('mobile-nav-close');
 
 function openMenu()  { mobileNav.classList.add('open'); }
 function closeMenu() { mobileNav.classList.remove('open'); }
-
-circleBtn.addEventListener('click', openMenu);
-stickyCirBtn.addEventListener('click', openMenu);
 mobileClose.addEventListener('click', closeMenu);
 mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
 
@@ -88,18 +82,30 @@ const ourWorkCat   = document.querySelector('.our-work-cat');
 const ourWorkSwiper = new Swiper('.our-work-swiper', {
   loop: true,
   speed: 800,
-  effect: 'fade',
-  fadeEffect: {
-    crossFade: true
+  grabCursor: true,
+  autoplay: { 
+    delay: 2000, 
+    disableOnInteraction: false 
   },
   slidesPerView: 'auto',
+  spaceBetween: 30,
+  breakpoints: {
+    768: {
+      spaceBetween: 30
+    },
+    1024: {
+      spaceBetween: 30
+    }
+  },
   navigation: {
     prevEl: '.our-work-prev',
     nextEl: '.our-work-next'
   },
+  observer: true,
+  observeParents: true,
   on: {
     slideChange() {
-      // Find the active slide
+      // Use realIndex for loop mode to get the correct data attributes
       const activeSlide = this.slides[this.activeIndex];
       if (activeSlide && ourWorkTitle && ourWorkCat) {
         ourWorkTitle.textContent = activeSlide.dataset.title || '';
@@ -119,7 +125,10 @@ const testSwiper = new Swiper('.test-swiper', {
   direction: 'horizontal',
   // Removed fade effect for slide transition
   autoplay: { delay: 6000, disableOnInteraction: false },
-  navigation: { prevEl: '.test-prev', nextEl: '.test-next' }
+  pagination: {
+    el: '.test-pagination',
+    clickable: true,
+  }
 });
 
 // ============================
@@ -169,33 +178,37 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.12 });
 
-document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .stagger')
+document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .stagger, .reveal-up')
   .forEach(el => observer.observe(el));
 
 // ============================
-// COUNTER ANIMATION
+// TEAM LEFT-SLIDE ANIMATION
 // ============================
-function animateCounter(el) {
-  const target = +el.getAttribute('data-target');
-  const start  = performance.now();
-  const duration = 1800;
-  const frame = (now) => {
-    const p = Math.min((now - start) / duration, 1);
-    const ease = 1 - Math.pow(1 - p, 3);
-    el.textContent = Math.floor(ease * target);
-    if (p < 1) requestAnimationFrame(frame);
-    else el.textContent = target;
-  };
-  requestAnimationFrame(frame);
+const teamSection = document.getElementById('team');
+if (teamSection) {
+  const teamObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        teamSection.querySelectorAll('.team-cell').forEach(cell => {
+          cell.classList.add('slide-in');
+        });
+        teamObserver.unobserve(teamSection);
+      }
+    });
+  }, { threshold: 0.1 });
+  teamObserver.observe(teamSection);
 }
 
-const counterObs = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      animateCounter(e.target);
-      counterObs.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.5 });
+// ============================
+// ABOUT SLIDESHOW
+// ============================
+const aboutSlides = document.querySelectorAll('.about-slide');
+if (aboutSlides.length > 0) {
+  let currentSlide = 0;
+  setInterval(() => {
+    aboutSlides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % aboutSlides.length;
+    aboutSlides[currentSlide].classList.add('active');
+  }, 4000);
+}
 
-document.querySelectorAll('[data-target]').forEach(el => counterObs.observe(el));
