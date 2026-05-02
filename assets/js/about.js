@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (slider && slider.children.length > 0 && galPrev && galNext) {
     let isAnimating = false;
-    const itemWidth = 336; // 320px inactive item width + 16px gap
+    const itemWidth = 416; // 400px inactive item width + 16px gap
     
     // Assign original indices for the counter
     Array.from(slider.children).forEach((item, index) => {
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
       secondItem.classList.add('active');
       updateCounter(secondItem);
 
-      slider.style.transition = 'transform 0.6s cubic-bezier(0.25, 1, 0.5, 1)';
+      slider.style.transition = 'transform 2s cubic-bezier(0.25, 1, 0.5, 1)';
       slider.style.transform = `translateX(-${itemWidth}px)`;
 
       slider.addEventListener('transitionend', function onNextEnd() {
@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
       void slider.offsetWidth;
 
       // Animate to 0
-      slider.style.transition = 'transform 0.6s cubic-bezier(0.25, 1, 0.5, 1)';
+      slider.style.transition = 'transform 2s cubic-bezier(0.25, 1, 0.5, 1)';
       slider.style.transform = 'translateX(0)';
 
       slider.addEventListener('transitionend', function onPrevEnd() {
@@ -167,6 +167,22 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize
     slider.children[0].classList.add('active');
     updateCounter(slider.children[0]);
+
+    // Auto-play functionality
+    let autoplayInterval = setInterval(() => {
+      galNext.click();
+    }, 4000); // Change image every 4 seconds (2s animation + 2s pause)
+
+    // Pause on hover
+    const galleryWrapper = document.querySelector('.hs-gallery-wrapper');
+    if (galleryWrapper) {
+      galleryWrapper.addEventListener('mouseenter', () => clearInterval(autoplayInterval));
+      galleryWrapper.addEventListener('mouseleave', () => {
+        autoplayInterval = setInterval(() => {
+          galNext.click();
+        }, 4000);
+      });
+    }
   }
 
   /* -------------------------------------------------------
