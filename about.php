@@ -128,21 +128,21 @@
      SECTION 3 — THREE APPROACH COLUMNS (below intro)
 ============================================================ -->
   <section class="hs-approach">
-    <div class="hs-approach-inner stagger">
+    <div class="hs-approach-inner">
       <div class="hs-approach-col">
-        <h3 class="hs-approach-title"><a href="#">Design Your Perfect Home</a></h3>
-        <p>We believe every home should be a reflection of its inhabitants. Through careful listening and deep understanding, we craft residential spaces that are both beautiful and deeply functional.</p>
-        <a href="#" class="hs-read-more">read more</a>
+        <div class="hs-approach-links">
+          <a href="#" class="hs-approach-link">Design your perfect home</a>
+          <a href="#" class="hs-approach-link">Download our brochure</a>
+          <a href="#" class="hs-approach-link">Ask our architect any question</a>
+        </div>
       </div>
       <div class="hs-approach-col">
         <h3 class="hs-approach-title">Urban Exteriors</h3>
-        <p>From street-facing facades to public plazas, we design exterior spaces that activate communities and create memorable experiences. Our work respects context while pushing boundaries of the discipline.</p>
-        <a href="#" class="hs-read-more">read more</a>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel felis aliquet, varius lectus in, feugiat enim. Nunc enim nibh, ultricies sit amet lectus in, euismod.</p>
       </div>
       <div class="hs-approach-col">
         <h3 class="hs-approach-title">Cityscapes Buildings</h3>
-        <p>We create buildings that become landmarks — structures that define skylines and serve as gathering places. Each project is an opportunity to shape how cities evolve and communities connect.</p>
-        <a href="#" class="hs-read-more">read more</a>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel felis aliquet, varius lectus in, feugiat enim. Nunc enim nibh, ultricies sit amet lectus in, euismod.</p>
       </div>
     </div>
   </section>
