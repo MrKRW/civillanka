@@ -30,7 +30,7 @@
 ============================================================ -->
   <header id="sticky-header" role="banner" aria-label="Sticky Navigation">
     <a href="index.html" class="sticky-logo" aria-label="Civilanka Home">
-      <img src="Logos/sharedImage%20-%20Copy.PNG" alt="Civilanka Architects" class="logo-img logo-img--sticky" />
+      <img src="Logos/trans.PNG" alt="Civilanka Architects" class="logo-img logo-img--sticky" />
     </a>
     <ul class="sticky-nav" role="list">
       <li><a href="index.html#hero">home</a></li>
@@ -71,7 +71,9 @@
      TOP BAR
 ============================================================ -->
   <div id="top-bar" aria-label="Site header">
-    <a href="index.html" class="site-logo" aria-label="Civilanka Home">civilanka</a>
+    <a href="index.html" class="site-logo" aria-label="Civilanka Home">
+      <img src="Logos/trans.PNG" alt="Civilanka Architects" class="logo-img logo-img--hero" />
+    </a>
     <button class="circle-btn" id="circle-menu-btn" aria-label="Open menu" aria-expanded="false"></button>
   </div>
 
@@ -83,7 +85,7 @@
 
     <header class="hs-hero-header">
       <a href="index.html" class="hs-hero-logo">
-        <span class="bold">civilanka</span><span class="light">Architects</span>
+        <img src="Logos/trans.PNG" alt="Civilanka Architects" class="logo-img logo-img--hero" />
       </a>
       <nav class="hs-hero-nav">
         <ul>
@@ -357,8 +359,7 @@
     <div class="hs-footer-inner">
       <div class="hs-footer-brand">
         <a href="index.html" class="hs-footer-logo">
-          <span class="hs-footer-logo-bold">Civilanka</span>
-          <span class="hs-footer-logo-light">Architects</span>
+          <img src="Logos/trans.PNG" alt="Civilanka Architects" class="logo-img logo-img--footer" />
         </a>
       </div>
 

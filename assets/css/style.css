@@ -328,8 +328,7 @@ p {
 }
 
 .logo-img--hero {
-  filter: brightness(0);
-  /* Makes logo black */
+  /* filter: brightness(0); Removed to show natural logo colors */
 }
 
 .logo-img--footer {
@@ -599,9 +598,8 @@ p {
   max-width: 280px;
   height: auto;
   display: block;
-  /* Warm earthy cream tint to match the architectural images */
-  filter: brightness(0) invert(85%) sepia(20%) saturate(350%) hue-rotate(350deg);
-  opacity: 0.95;
+  /* filter: brightness(0) invert(85%) sepia(20%) saturate(350%) hue-rotate(350deg); */
+  /* opacity: 0.95; */
 }
 
 @media (max-width: 900px) {
