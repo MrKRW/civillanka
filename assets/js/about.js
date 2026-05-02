@@ -77,19 +77,96 @@ document.addEventListener('DOMContentLoaded', () => {
   }, 5000);
 
   /* -------------------------------------------------------
-     GALLERY NAV (scroll or fade)
+     INFINITE CIRCULAR SLIDER GALLERY
   ------------------------------------------------------- */
-  const galleryInner = document.querySelector('.hs-gallery-inner');
+  const slider = document.getElementById('hs-gallery-slider');
   const galPrev = document.getElementById('hs-gal-prev');
   const galNext = document.getElementById('hs-gal-next');
+  const currentCounter = document.getElementById('hs-gal-current');
+  const totalCounter = document.getElementById('hs-gal-total');
 
-  if (galleryInner && galPrev && galNext) {
+  if (slider && slider.children.length > 0 && galPrev && galNext) {
+    let isAnimating = false;
+    const itemWidth = 336; // 320px inactive item width + 16px gap
+    
+    // Assign original indices for the counter
+    Array.from(slider.children).forEach((item, index) => {
+      item.dataset.index = index;
+    });
+
+    if (totalCounter) {
+      totalCounter.textContent = slider.children.length;
+    }
+
+    function updateCounter(activeItem) {
+      if (currentCounter && activeItem) {
+        currentCounter.textContent = parseInt(activeItem.dataset.index) + 1;
+      }
+    }
+
     galNext.addEventListener('click', () => {
-      galleryInner.scrollBy({ left: 320, behavior: 'smooth' });
+      if (isAnimating) return;
+      isAnimating = true;
+
+      const firstItem = slider.children[0];
+      const secondItem = slider.children[1];
+
+      firstItem.classList.remove('active');
+      secondItem.classList.add('active');
+      updateCounter(secondItem);
+
+      slider.style.transition = 'transform 0.6s cubic-bezier(0.25, 1, 0.5, 1)';
+      slider.style.transform = `translateX(-${itemWidth}px)`;
+
+      slider.addEventListener('transitionend', function onNextEnd() {
+        slider.removeEventListener('transitionend', onNextEnd);
+        
+        // Move the first item to the end
+        slider.appendChild(firstItem);
+        
+        // Reset transform without animation
+        slider.style.transition = 'none';
+        slider.style.transform = 'translateX(0)';
+        
+        // Force reflow
+        void slider.offsetWidth;
+        
+        isAnimating = false;
+      });
     });
+
     galPrev.addEventListener('click', () => {
-      galleryInner.scrollBy({ left: -320, behavior: 'smooth' });
+      if (isAnimating) return;
+      isAnimating = true;
+
+      const firstItem = slider.children[0];
+      const lastItem = slider.children[slider.children.length - 1];
+
+      firstItem.classList.remove('active');
+      lastItem.classList.add('active');
+      updateCounter(lastItem);
+
+      // Move last item to the front before animating
+      slider.style.transition = 'none';
+      slider.prepend(lastItem);
+      slider.style.transform = `translateX(-${itemWidth}px)`;
+
+      // Force reflow
+      void slider.offsetWidth;
+
+      // Animate to 0
+      slider.style.transition = 'transform 0.6s cubic-bezier(0.25, 1, 0.5, 1)';
+      slider.style.transform = 'translateX(0)';
+
+      slider.addEventListener('transitionend', function onPrevEnd() {
+        slider.removeEventListener('transitionend', onPrevEnd);
+        isAnimating = false;
+      });
     });
+
+    // Initialize
+    slider.children[0].classList.add('active');
+    updateCounter(slider.children[0]);
   }
 
   /* -------------------------------------------------------

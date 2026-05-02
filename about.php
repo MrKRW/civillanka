@@ -127,20 +127,33 @@
      SECTION 4 — THREE-IMAGE GALLERY (dark bg, horizontal)
 ============================================================ -->
   <section class="hs-gallery">
-    <div class="hs-gallery-inner">
-      <div class="hs-gallery-item hs-gallery-large reveal">
-        <img src="Project%20images/1%20(4).png" alt="Studio interior" />
-      </div>
-      <div class="hs-gallery-item hs-gallery-square reveal">
-        <img src="Project%20images/WhatsApp%20Image%202023-07-17%20at%2021.07.37%20(1).jpeg" alt="Team at work" />
-      </div>
-      <div class="hs-gallery-item hs-gallery-square reveal">
-        <img src="Project%20images/A%20(10).png" alt="Technical drawings" />
+    <div class="hs-gallery-wrapper">
+      <div class="hs-gallery-slider" id="hs-gallery-slider">
+        <div class="hs-gallery-item active">
+          <img src="Project%20images/1%20(4).png" alt="Studio interior" />
+        </div>
+        <div class="hs-gallery-item">
+          <img src="Project%20images/WhatsApp%20Image%202023-07-17%20at%2021.07.37%20(1).jpeg" alt="Team at work" />
+        </div>
+        <div class="hs-gallery-item">
+          <img src="Project%20images/A%20(10).png" alt="Technical drawings" />
+        </div>
+        <div class="hs-gallery-item">
+          <img src="Project%20images/2023-11-07.jpg" alt="Architects collaborating" />
+        </div>
+        <div class="hs-gallery-item">
+          <img src="Project%20images/hero_exterior.png" alt="Hero exterior" />
+        </div>
       </div>
     </div>
-    <div class="hs-gallery-nav">
-      <button id="hs-gal-prev" aria-label="Previous">&#8592;</button>
-      <button id="hs-gal-next" aria-label="Next">&#8594;</button>
+    <div class="hs-gallery-controls">
+      <div class="hs-gallery-counter">
+        <span id="hs-gal-current">1</span>/<span id="hs-gal-total">5</span>
+      </div>
+      <div class="hs-gallery-nav">
+        <button id="hs-gal-prev" aria-label="Previous">&#8592;</button>
+        <button id="hs-gal-next" aria-label="Next">&#8594;</button>
+      </div>
     </div>
   </section>
 

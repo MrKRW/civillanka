@@ -196,66 +196,110 @@
 }
 
 /* ============================================================
-   SECTION 4 — THREE-IMAGE GALLERY
+   SECTION 4 — HORIZONTAL SLIDER GALLERY
 ============================================================ */
 .hs-gallery {
-  background: #f5f4f1;
-  padding: 0;
+  background: #ffffff;
+  padding: 80px 0;
   overflow: hidden;
   position: relative;
 }
 
-.hs-gallery-inner {
-  display: grid;
-  grid-template-columns: 1.6fr 1fr 1fr;
-  gap: 0;
-  height: 420px;
+.hs-gallery-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  overflow: hidden;
+}
+
+.hs-gallery-slider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
 }
 
 .hs-gallery-item {
+  flex: 0 0 320px;
+  height: 320px;
   overflow: hidden;
   position: relative;
+  transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .hs-gallery-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: grayscale(30%);
-  transition: transform 0.7s ease, filter 0.4s ease;
+  transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+  transform-origin: center center;
 }
 
-.hs-gallery-item:hover img {
-  transform: scale(1.05);
-  filter: grayscale(0%);
+.hs-gallery-item.active {
+  flex: 0 0 620px;
+  height: 480px;
+}
+
+.hs-gallery-item.active img {
+  transform: scale(1.1);
+}
+
+.hs-gallery-controls {
+  max-width: 1400px;
+  margin: 30px auto 0;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.hs-gallery-controls::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 40px;
+  right: 40px;
+  height: 1px;
+  background: #e8e6e1;
+}
+
+.hs-gallery-counter {
+  font-family: var(--font-h);
+  font-size: 1.1rem;
+  color: #fff;
+  background: #000;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  gap: 0;
+  font-weight: 600;
+  letter-spacing: 2px;
 }
 
 .hs-gallery-nav {
-  position: absolute;
-  bottom: 24px;
-  right: 40px;
   display: flex;
   gap: 16px;
-  z-index: 5;
 }
 
 .hs-gallery-nav button {
-  background: rgba(255, 255, 255, 0.85);
+  background: transparent;
   border: none;
-  width: 38px;
-  height: 38px;
-  font-size: 1rem;
+  width: auto;
+  font-size: 1.2rem;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.3s, transform 0.3s;
+  transition: transform 0.3s, color 0.3s;
   color: #111;
+  padding: 0;
 }
 
 .hs-gallery-nav button:hover {
-  background: #ffffff;
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 /* ============================================================
