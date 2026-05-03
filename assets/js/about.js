@@ -185,15 +185,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  /* -------------------------------------------------------
-     HERO PARALLAX (subtle)
-  ------------------------------------------------------- */
-  const heroBg = document.querySelector('.hs-hero-bg');
-  if (heroBg) {
-    window.addEventListener('scroll', () => {
-      const scrolled = window.pageYOffset;
-      heroBg.style.transform = `scale(1.02) translateY(${scrolled * 0.25}px)`;
-    }, { passive: true });
-  }
+
 
 });

@@ -28,7 +28,7 @@
   filter: brightness(0.45);
   /* Darker for better contrast */
   transform: scale(1.02);
-  transition: transform 8s ease;
+  transition: none;
 }
 
 /* New Hero Header */
