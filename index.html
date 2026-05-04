@@ -40,7 +40,7 @@
       <li><a href="#services">pages</a></li>
       <li><a href="#projects">portfolio</a></li>
       <li><a href="contact.html">contact</a></li>
-    </ul>
+    </ul> 
 
   </header>
 
@@ -593,6 +593,49 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!-- Main JS -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Dynamic Project Loading from Database -->
+  <script>
+    (async function loadFeaturedProjects() {
+      try {
+        const res = await fetch('api/projects.php?action=featured');
+        const data = await res.json();
+        const projects = data.projects;
+        if (!projects || projects.length === 0) return; // keep static slides
+
+        const wrapper = document.querySelector('.our-work-swiper .swiper-wrapper');
+        if (!wrapper) return;
+
+        // Replace static slides with database projects
+        wrapper.innerHTML = '';
+        projects.forEach(p => {
+          const imgSrc = p.image_main ? 'uploads/projects/' + p.image_main : 'Project%20images/2023-11-07.jpg';
+          const slide = document.createElement('div');
+          slide.className = 'swiper-slide our-work-slide';
+          slide.setAttribute('data-title', p.title);
+          slide.setAttribute('data-cat', p.service_type || '');
+          slide.innerHTML = `<img src="${imgSrc}" alt="${p.title}" />`;
+          wrapper.appendChild(slide);
+        });
+
+        // Update the info panel with the first project
+        if (projects.length > 0) {
+          const titleEl = document.querySelector('.our-work-title');
+          const catEl = document.querySelector('.our-work-cat');
+          if (titleEl) titleEl.textContent = projects[0].title;
+          if (catEl) catEl.textContent = projects[0].service_type || '';
+        }
+
+        // Re-initialize swiper if it exists
+        const swiperEl = document.querySelector('.our-work-swiper');
+        if (swiperEl && swiperEl.swiper) {
+          swiperEl.swiper.update();
+        }
+      } catch (e) {
+        // API not available – keep static slides
+      }
+    })();
+  </script>
 
 </body>
 
