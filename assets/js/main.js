@@ -12,7 +12,7 @@ const sectionMap = [
   { id: 'hero', label: 'home' },
   { id: 'about', label: 'about' },
   { id: 'services', label: 'pages' },
-  { id: 'projects', label: 'portfolio' },
+  { id: 'projects', label: 'projects' },
   { id: 'footer', label: 'contact' },
 ];
 
@@ -36,17 +36,16 @@ window.addEventListener('scroll', () => {
   const pastHero = window.scrollY > 50;
 
   // Toggle hero-state elements
-
-  topBar.classList.toggle('hidden', pastHero);
+  if (topBar) topBar.classList.toggle('hidden', pastHero);
 
   // Toggle sticky header
-  stickyHeader.classList.toggle('visible', pastHero);
+  if (stickyHeader) stickyHeader.classList.toggle('visible', pastHero);
 
   // Back-to-top
-  backTop.classList.toggle('show', window.scrollY > 400);
+  if (backTop) backTop.classList.toggle('show', window.scrollY > 400);
 
   // Active nav item
-  updateNavActive(getActiveSection());
+  if (stickyHeader) updateNavActive(getActiveSection());
 });
 
 // ============================

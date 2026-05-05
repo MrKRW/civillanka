@@ -414,6 +414,34 @@ p {
   transform: scale(1.1);
 }
 
+/* Sticky Action Button (Right) */
+.sticky-btn {
+  font-family: var(--font-h);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 10px 24px;
+  background: var(--black);
+  color: var(--white);
+  border: 1px solid var(--black);
+  transition: all 0.35s var(--ease);
+  flex-shrink: 0;
+  display: inline-block;
+  line-height: 1;
+}
+
+.sticky-btn:hover {
+  background: transparent;
+  color: var(--black);
+}
+
+@media (max-width: 600px) {
+  .sticky-btn {
+    display: none; /* Hide on mobile to save space, already in mobile nav */
+  }
+}
+
 /* ===========================
    HERO SLIDER
 /* ===========================
