@@ -22,11 +22,11 @@ try {
     ]);
 
     // Create database
-    $pdo->exec("CREATE DATABASE IF NOT EXISTS `civilweb_db` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci");
-    echo "✓ Database 'civilweb_db' created\n";
+    $pdo->exec("CREATE DATABASE IF NOT EXISTS `civillanka_db` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci");
+    echo "✓ Database 'civillanka_db' created\n";
 
     // Use database
-    $pdo->exec("USE `civilweb_db`");
+    $pdo->exec("USE `civillanka_db`");
 
     // Create projects table
     $pdo->exec("

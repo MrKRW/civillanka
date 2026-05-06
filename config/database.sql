@@ -2,11 +2,11 @@
 --  CivilLanka Database Schema
 -- ============================================================
 
-CREATE DATABASE IF NOT EXISTS `civilweb_db`
+CREATE DATABASE IF NOT EXISTS `civillanka_db`
   DEFAULT CHARACTER SET utf8mb4
   DEFAULT COLLATE utf8mb4_unicode_ci;
 
-USE `civilweb_db`;
+USE `civillanka_db`;
 
 -- ------------------------------------------------------------
 --  PROJECTS TABLE
