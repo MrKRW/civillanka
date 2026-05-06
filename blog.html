@@ -4,16 +4,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog — Civilanka Architecture &amp; Design</title>
-  <meta name="description"
-    content="Explore insights, interviews, and design stories from Civilanka Architecture Studio. Ideas on facades, interiors, landscaping, and urban design." />
+  <title>Blog — Civilanka Architecture & Design</title>
+  <meta name="description" content="Insights and stories from Civilanka Architecture Studio." />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
 
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/style.css" />
@@ -22,260 +19,257 @@
 
 <body class="blog-page">
 
-  <!-- ============================================================
-     PAGE HEADER — sticky, plain white (matches contact.html pattern)
-  ============================================================ -->
-  <header id="bl-page-header" role="banner" aria-label="Site Navigation">
-    <a href="index.html" class="bl-nav-logo" aria-label="Civilanka Home">
-      <img src="Logos/trans.PNG" alt="Civilanka Architects" class="logo-img logo-img--sticky" />
-    </a>
-    <ul class="bl-nav-links" role="list">
-      <li><a href="index.html">home</a></li>
-      <li><a href="about.html">pages</a></li>
-      <li><a href="projects.html">projects</a></li>
-      <li class="active"><a href="blog.html">blog</a></li>
-      <li><a href="contact.html">contact</a></li>
-    </ul>
+  <!-- Header -->
+  <header id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="Logos/trans.PNG" alt="Civilanka Architects" class="logo-img">
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">home</a></li>
+          <li><a href="about.html">pages</a></li>
+          <li><a href="projects.html">portfolio</a></li>
+          <li class="active"><a href="blog.html">blog</a></li>
+          <li><a href="contact.html">shop</a></li>
+        </ul>
+      </nav>
+      <div class="header-right">
+        <button class="search-trigger" aria-label="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+      </div>
+    </div>
   </header>
 
-  <!-- ============================================================
-     PAGE TITLE BLOCK
-  ============================================================ -->
-  <section class="bl-page-title">
-    <div class="bl-page-title-inner">
-      <span class="bl-section-label">&bull;&nbsp; CIVILANKA STUDIO</span>
-      <h1 class="bl-title">Journal &amp; Insights</h1>
+  <!-- Breadcrumbs -->
+  <div class="breadcrumb-container">
+    <div class="container">
+      <nav class="breadcrumbs">
+        <a href="index.html">Home</a> / <span>Right Sidebar</span>
+      </nav>
     </div>
-  </section>
+  </div>
 
-  <!-- ============================================================
-     BLOG FILTER BAR
-  ============================================================ -->
-  <section class="bl-filter-bar">
-    <div class="bl-filter-inner">
-      <button class="bl-filter-btn active" data-filter="all" id="filter-all">All</button>
-      <button class="bl-filter-btn" data-filter="facades" id="filter-facades">Facades</button>
-      <button class="bl-filter-btn" data-filter="interior" id="filter-interior">Interior</button>
-      <button class="bl-filter-btn" data-filter="landscaping" id="filter-landscaping">Landscaping</button>
-      <button class="bl-filter-btn" data-filter="architecture" id="filter-architecture">Architecture</button>
-      <button class="bl-filter-btn" data-filter="commercial" id="filter-commercial">Commercial</button>
-    </div>
-  </section>
+  <!-- Main Content -->
+  <main class="blog-main-layout">
+    <div class="container">
+      <div class="blog-layout-grid">
+        
+        <!-- Blog Content Left -->
+        <div class="blog-content">
+          
+          <!-- Post 1: Slider Style -->
+          <article class="post-item post-slider">
+            <div class="post-media">
+              <img src="assets/images/blog/kitchen.png" alt="Living Room Trends">
+              <div class="slider-controls">
+                <span class="slide-count">1/3</span>
+                <div class="slide-arrows">
+                  <button class="prev-arrow">←</button>
+                  <button class="next-arrow">→</button>
+                </div>
+              </div>
+            </div>
+            <div class="post-info">
+              <h2 class="post-title"><a href="#">Living Room Trends For The Upcoming Season 2024</a></h2>
+              <div class="post-meta">
+                <span class="post-cat">LANDSCAPE ARCHITECTURE</span>
+                <span class="post-date">DECEMBER 14, 2022</span>
+              </div>
+            </div>
+          </article>
 
-  <!-- ============================================================
-     BLOG MASONRY GRID — mirrors Hiroshi Architects layout
-  ============================================================ -->
-  <main id="bl-main" class="bl-main">
+          <!-- Post 2: Quote Style -->
+          <article class="post-item post-quote">
+            <div class="quote-container">
+              <div class="author-img">
+                <img src="assets/images/blog/architect.png" alt="Frank Gehry">
+              </div>
+              <div class="quote-text-wrap">
+                <blockquote class="quote-text">
+                  “Architecture should speak of its time and place, but yearn for timelessness.”
+                </blockquote>
+                <cite class="quote-author">FRANK GEHRY</cite>
+              </div>
+            </div>
+          </article>
 
-    <!-- ── FEATURED ROW: 3 columns ── -->
-    <div class="bl-featured-row">
+          <!-- Post 3: Standard Image -->
+          <article class="post-item post-standard">
+            <div class="post-media">
+              <img src="assets/images/blog/villa.png" alt="Glass Wall Facade">
+            </div>
+            <div class="post-info">
+              <h2 class="post-title"><a href="#">Glass Wall Facade And How To Design It With Wooden Profiles</a></h2>
+              <div class="post-meta">
+                <span class="post-cat">LANDSCAPE ARCHITECTURE</span>
+                <span class="post-date">DECEMBER 14, 2022</span>
+              </div>
+            </div>
+          </article>
 
-      <!-- Card 1 — tall portrait -->
-      <article class="bl-card bl-card--tall" data-category="facades landscaping" id="blog-card-1">
-        <div class="bl-card-img-wrap">
-          <img src="Project%20images/1%20(4).png" alt="Facades &amp; Landscaping project" loading="lazy" />
-        </div>
-        <div class="bl-card-overlay">
-          <span class="bl-card-cat">FACADES, LANDSCAPING</span>
-          <h2 class="bl-card-title">Karin</h2>
-        </div>
-        <a href="#" class="bl-card-link" aria-label="Read: Karin — Facades &amp; Landscaping"></a>
-      </article>
+          <!-- Post 4: Small Image List Style -->
+          <article class="post-item post-list-style">
+            <div class="post-list-inner">
+              <div class="post-thumb">
+                <img src="Project%20images/hero_local_bright.png" alt="Flooring types">
+              </div>
+              <div class="post-list-content">
+                <h3 class="post-list-title"><a href="#">Types of flooring to consider for your new apartment</a></h3>
+              </div>
+            </div>
+          </article>
 
-      <!-- Card 2 — wide landscape (center) -->
-      <article class="bl-card bl-card--wide" data-category="architecture" id="blog-card-2">
-        <div class="bl-card-img-wrap">
-          <img src="Project%20images/2023-11-07.jpg" alt="Urban canal architecture" loading="lazy" />
-        </div>
-        <div class="bl-card-overlay bl-card-overlay--bottom">
-          <span class="bl-card-cat">ARCHITECTURE</span>
-          <h2 class="bl-card-title">Waterfront Living District</h2>
-        </div>
-        <a href="#" class="bl-card-link" aria-label="Read: Waterfront Living District"></a>
-      </article>
+          <!-- Post 5: Standard Image 2 -->
+          <article class="post-item post-standard">
+            <div class="post-media">
+              <img src="assets/images/blog/bathroom.png" alt="Hotel Rooms Puerto Rico">
+            </div>
+            <div class="post-info">
+              <h2 class="post-title"><a href="#">Architecture & Interior Design Of The Hotel Rooms In Puerto Rico</a></h2>
+              <div class="post-meta">
+                <span class="post-cat">LANDSCAPE ARCHITECTURE</span>
+                <span class="post-date">DECEMBER 14, 2022</span>
+              </div>
+            </div>
+          </article>
 
-      <!-- Card 3 — tall portrait -->
-      <article class="bl-card bl-card--tall" data-category="facades" id="blog-card-3">
-        <div class="bl-card-img-wrap">
-          <img src="Project%20images/A%20(10).png" alt="Timber facade architecture" loading="lazy" />
-        </div>
-        <div class="bl-card-overlay">
-          <span class="bl-card-cat">FACADES</span>
-          <h2 class="bl-card-title">Timber Clad House</h2>
-        </div>
-        <a href="#" class="bl-card-link" aria-label="Read: Timber Clad House"></a>
-      </article>
+          <!-- Pagination -->
+          <div class="pagination">
+            <ul>
+              <li class="active"><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#" class="next-page">→</a></li>
+            </ul>
+          </div>
 
-    </div><!-- /.bl-featured-row -->
-
-    <!-- ── SECONDARY GRID ── -->
-    <div class="bl-grid">
-
-      <!-- Card 4 -->
-      <article class="bl-card" data-category="interior" id="blog-card-4">
-        <div class="bl-card-img-wrap">
-          <img src="Project%20images/hero_interior.png" alt="Contemporary interior design" loading="lazy" />
-        </div>
-        <div class="bl-card-overlay bl-card-overlay--bottom">
-          <span class="bl-card-cat">INTERIOR</span>
-          <h2 class="bl-card-title">Studio Cuisine &amp; Bar — Innovative Interior</h2>
-        </div>
-        <div class="bl-card-meta">
-          <span>INTERVIEWS</span>
-          <span class="bl-meta-sep">|</span>
-          <span>DECEMBER 14, 2023</span>
-        </div>
-        <a href="#" class="bl-card-link" aria-label="Read: Studio Cuisine &amp; Bar — Innovative Interior"></a>
-      </article>
-
-      <!-- Card 5 -->
-      <article class="bl-card" data-category="landscaping" id="blog-card-5">
-        <div class="bl-card-img-wrap">
-          <img src="Project%20images/hero_exterior.png" alt="Landscape architecture" loading="lazy" />
-        </div>
-        <div class="bl-card-overlay bl-card-overlay--bottom">
-          <span class="bl-card-cat">LANDSCAPING</span>
-          <h2 class="bl-card-title">Coexisting With The Landscape Is The Main Rule</h2>
-        </div>
-        <div class="bl-card-meta">
-          <span>DESIGN NOTES</span>
-          <span class="bl-meta-sep">|</span>
-          <span>NOVEMBER 03, 2023</span>
-        </div>
-        <a href="#" class="bl-card-link" aria-label="Read: Coexisting with the Landscape"></a>
-      </article>
-
-      <!-- Card 6 -->
-      <article class="bl-card" data-category="architecture" id="blog-card-6">
-        <div class="bl-card-img-wrap">
-          <img src="Project%20images/hero_local_bright.png" alt="Local architecture project" loading="lazy" />
-        </div>
-        <div class="bl-card-overlay bl-card-overlay--bottom">
-          <span class="bl-card-cat">ARCHITECTURE</span>
-          <h2 class="bl-card-title">Glass Wall Facade — Designing With AluProfiles</h2>
-        </div>
-        <div class="bl-card-meta">
-          <span>MATERIAL STORIES</span>
-          <span class="bl-meta-sep">|</span>
-          <span>OCTOBER 18, 2023</span>
-        </div>
-        <a href="#" class="bl-card-link" aria-label="Read: Glass Wall Facade"></a>
-      </article>
-
-      <!-- Card 7 -->
-      <article class="bl-card" data-category="commercial" id="blog-card-7">
-        <div class="bl-card-img-wrap">
-          <img src="Project%20images/WIN_Facility6.jpg" alt="Commercial industrial facility" loading="lazy" />
-        </div>
-        <div class="bl-card-overlay bl-card-overlay--bottom">
-          <span class="bl-card-cat">COMMERCIAL</span>
-          <h2 class="bl-card-title">Industrial Elegance — Kandy Commercial Hub</h2>
-        </div>
-        <div class="bl-card-meta">
-          <span>CASE STUDY</span>
-          <span class="bl-meta-sep">|</span>
-          <span>SEPTEMBER 27, 2023</span>
-        </div>
-        <a href="#" class="bl-card-link" aria-label="Read: Industrial Elegance"></a>
-      </article>
-
-      <!-- Card 8 -->
-      <article class="bl-card" data-category="interior" id="blog-card-8">
-        <div class="bl-card-img-wrap">
-          <img src="Project%20images/hero_international_bright.png" alt="International architecture" loading="lazy" />
-        </div>
-        <div class="bl-card-overlay bl-card-overlay--bottom">
-          <span class="bl-card-cat">INTERIOR</span>
-          <h2 class="bl-card-title">Minimalist Living — The Art of Spatial Balance</h2>
-        </div>
-        <div class="bl-card-meta">
-          <span>INTERVIEWS</span>
-          <span class="bl-meta-sep">|</span>
-          <span>AUGUST 12, 2023</span>
-        </div>
-        <a href="#" class="bl-card-link" aria-label="Read: Minimalist Living"></a>
-      </article>
-
-      <!-- Card 9 (spans 2 cols on desktop — wide accent card) -->
-      <article class="bl-card bl-card--accent" data-category="facades" id="blog-card-9">
-        <div class="bl-card-img-wrap">
-          <img src="Project%20images/hero_local_dark.png" alt="Facade design dark" loading="lazy" />
-        </div>
-        <div class="bl-card-overlay bl-card-overlay--center">
-          <span class="bl-card-cat">FACADES</span>
-          <h2 class="bl-card-title">Natural Light &amp; Concrete — A Dialogue Between Shadow and Form</h2>
-          <p class="bl-card-desc">Exploring how strategic void placement transforms the relationship between structure and natural illumination across different hours of the day.</p>
-          <span class="bl-card-read-more">Read Article →</span>
-        </div>
-        <a href="#" class="bl-card-link" aria-label="Read: Natural Light &amp; Concrete"></a>
-      </article>
-
-    </div><!-- /.bl-grid -->
-
-    <!-- ── LOAD MORE ── -->
-    <div class="bl-load-more-wrap">
-      <button class="bl-load-more" id="bl-load-more">Load More Articles</button>
-    </div>
-
-  </main><!-- /#bl-main -->
-
-  <!-- ============================================================
-     FOOTER
-  ============================================================ -->
-  <footer id="footer" role="contentinfo">
-    <div class="hs-footer-inner">
-      <div class="hs-footer-brand">
-        <a href="index.html" class="hs-footer-logo">
-          <img src="Logos/trans.PNG" alt="Civilanka Architects" class="logo-img logo-img--footer" />
-        </a>
-      </div>
-
-      <div class="hs-footer-cols">
-        <div class="hs-footer-col">
-          <span class="hs-footer-col-label">Navigate</span>
-          <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="index.html#services">Services</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="blog.html">Journal</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
         </div>
 
-        <div class="hs-footer-col">
-          <span class="hs-footer-col-label">Explore</span>
-          <ul>
-            <li><a href="#">Architectural Design</a></li>
-            <li><a href="#">Interior Architecture</a></li>
-            <li><a href="#">Urban Planning</a></li>
-            <li><a href="#">Landscape Design</a></li>
-          </ul>
-        </div>
+        <!-- Sidebar Right -->
+        <aside class="blog-sidebar">
+          
+          <!-- Widget: Search -->
+          <div class="widget widget-search">
+            <form class="search-form">
+              <input type="text" placeholder="SEARCH" aria-label="Search">
+              <button type="submit">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              </button>
+            </form>
+          </div>
 
-        <div class="hs-footer-col">
-          <span class="hs-footer-col-label">Contact</span>
-          <address>
-            <span>24 Studio Lane</span>
-            <span>Colombo 03, Sri Lanka</span>
-            <a href="tel:+94112345678">+94 11 234 5678</a>
-            <a href="mailto:hello@civilweb.com">hello@civilweb.com</a>
-          </address>
-        </div>
+          <!-- Widget: Categories -->
+          <div class="widget widget-categories">
+            <h3 class="widget-title">Blog categories</h3>
+            <ul>
+              <li><a href="#">ARCHITECTURE</a></li>
+              <li><a href="#">INTERVIEWS</a></li>
+              <li><a href="#">LANDSCAPE ARCHITECTURE</a></li>
+              <li><a href="#">MATERIALS</a></li>
+            </ul>
+          </div>
+
+          <!-- Widget: Read Next -->
+          <div class="widget widget-read-next">
+            <h3 class="widget-title">Read next</h3>
+            <div class="read-next-list">
+              <div class="read-next-item">
+                <h4><a href="#">Living Room Trends For The Upcoming Season 2024</a></h4>
+                <span class="item-cat">LANDSCAPE ARCHITECTURE</span>
+              </div>
+              <div class="read-next-item">
+                <h4><a href="#">Frank Gehry</a></h4>
+                <span class="item-cat">LANDSCAPE ARCHITECTURE</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Widget: Newsletter -->
+          <div class="widget widget-newsletter">
+            <div class="newsletter-box">
+              <h3 class="widget-title">Join Our Newsletter</h3>
+              <form class="newsletter-form">
+                <input type="email" placeholder="Your Email" required>
+                <button type="submit" class="btn-send">send</button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Widget: Get Inspired -->
+          <div class="widget widget-inspired">
+            <h3 class="widget-title">Get Inspired</h3>
+            <div class="inspired-grid">
+              <div class="grid-item"><img src="assets/images/blog/inspired_1.png" alt="Inspiration 1"></div>
+              <div class="grid-item"><img src="assets/images/blog/inspired_2.png" alt="Inspiration 2"></div>
+              <div class="grid-item"><img src="assets/images/blog/inspired_3.png" alt="Inspiration 3"></div>
+              <div class="grid-item"><img src="assets/images/blog/inspired_4.png" alt="Inspiration 4"></div>
+            </div>
+          </div>
+
+          <!-- Widget: Promo -->
+          <div class="widget widget-promo">
+            <div class="promo-box">
+              <div class="promo-img">
+                <img src="assets/images/blog/magazine.png" alt="Lighthouse Magazine">
+              </div>
+              <div class="promo-content">
+                <h4>Light House Magazine No 23</h4>
+                <a href="#" class="order-link">order now</a>
+              </div>
+            </div>
+          </div>
+
+        </aside>
+
       </div>
     </div>
+  </main>
 
-    <div class="hs-footer-bottom">
-      <p>&copy; 2025 Civilanka Architecture Studio. All rights reserved.</p>
+  <!-- Footer -->
+  <footer id="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo-link">
+            <img src="Logos/trans.PNG" alt="Civilanka Architects" class="footer-logo-img">
+          </a>
+        </div>
+        <div class="footer-cols">
+          <div class="footer-col">
+            <span class="col-label">SOCIAL</span>
+            <ul>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Behance</a></li>
+              <li><a href="#">LinkedIn</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <span class="col-label">INFO</span>
+            <ul>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Terms of service</a></li>
+              <li><a href="#">Studio</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <span class="col-label">CONTACT</span>
+            <address>
+              12 Terra Str, NY<br>
+              +585 889 9964<br>
+              <a href="mailto:hiroshi@example.com">hiroshi@example.com</a>
+            </address>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 QODEINTERACTIVE</p>
+      </div>
     </div>
   </footer>
 
-  <!-- Back to top -->
-  <button id="back-top" aria-label="Back to top">&#8593;</button>
-
-  <!-- JS -->
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/blog.js"></script>
-
 </body>
 
 </html>
