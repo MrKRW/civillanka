@@ -87,8 +87,9 @@
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
-  column-count: 3;
-  column-gap: 5px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
 }
 
 /* ── PROJECT CARD ───────────────────────── */
@@ -96,8 +97,6 @@
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  break-inside: avoid;
-  margin-bottom: 5px;
   opacity: 0;
   transform: translateY(30px);
   animation: pjCardIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
@@ -125,7 +124,7 @@
 /* ── Card image ─────────────────────────── */
 .pj-card-img {
   position: relative;
-  /* Removed fixed aspect-ratio for masonry effect */
+  aspect-ratio: 3 / 2; /* Equal rectangles */
   overflow: hidden;
   background: #f0ede8;
 }
@@ -365,7 +364,7 @@
 
 /* ── RESPONSIVE ─────────────────────────── */
 @media (max-width: 1024px) {
-  .pj-grid { column-count: 2; }
+  .pj-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
@@ -378,12 +377,12 @@
   }
 
   .pj-grid {
-    column-count: 1;
-    column-gap: 0;
+    grid-template-columns: 1fr;
+    gap: 15px;
   }
 
   .pj-card {
-    margin-bottom: 20px;
+    margin-bottom: 0;
   }
 
   .pj-filter-btn {
