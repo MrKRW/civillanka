@@ -6,15 +6,23 @@
 (function () {
   const API = 'api/projects.php';
   const UPLOAD = 'uploads/projects/';
-  const grid = document.getElementById('pj-grid');
-  const emptyState = document.getElementById('pj-empty');
-  const countText = document.getElementById('pj-count-text');
-  const filterBtns = document.querySelectorAll('.pj-filter-btn');
-  const typeBtns = document.querySelectorAll('.pj-type-btn');
-
+  
+  let grid, emptyState, countText;
   let allProjects = [];
   let activeLocation = 'all';
   let activeType = 'all';
+
+  /* ── INIT ──────────────────────────────── */
+  document.addEventListener('DOMContentLoaded', () => {
+    grid = document.getElementById('pj-grid');
+    emptyState = document.getElementById('pj-empty');
+    countText = document.getElementById('pj-count-text');
+
+    if (!grid) return;
+
+    initFilters();
+    loadProjects();
+  });
 
   /* ── LOAD ──────────────────────────────── */
   async function loadProjects() {
@@ -24,17 +32,24 @@
       allProjects = data.projects || [];
       renderProjects();
     } catch (e) {
-      grid.innerHTML = '';
-      emptyState.style.display = 'block';
-      countText.textContent = 'Unable to load projects';
+      if (grid) grid.innerHTML = '';
+      if (emptyState) emptyState.style.display = 'block';
+      if (countText) countText.textContent = 'Unable to load projects';
     }
   }
 
   /* ── RENDER ────────────────────────────── */
   function renderProjects() {
+    if (!grid) return;
+
     const filtered = allProjects.filter(p => {
       const matchLocation = activeLocation === 'all' || p.category === activeLocation;
-      const matchType = activeType === 'all' || (p.service_type && p.service_type.toLowerCase().includes(activeType.toLowerCase()));
+      
+      // Service type matching: case-insensitive exact match
+      const pType = (p.service_type || '').trim().toLowerCase();
+      const aType = activeType.trim().toLowerCase();
+      const matchType = activeType === 'all' || pType === aType;
+      
       return matchLocation && matchType;
     });
 
@@ -51,13 +66,17 @@
 
     // Count text
     let label = 'projects';
-    if (activeLocation !== 'all' && activeType !== 'all') {
-      label = `${activeLocation} ${activeType} projects`;
-    } else if (activeLocation !== 'all') {
-      label = `${activeLocation} projects`;
-    } else if (activeType !== 'all') {
-      label = `${activeType} projects`;
+    const locLabel = activeLocation === 'all' ? '' : activeLocation;
+    const typeLabel = activeType === 'all' ? '' : activeType.toLowerCase();
+    
+    if (locLabel && typeLabel) {
+      label = `${locLabel} ${typeLabel} projects`;
+    } else if (locLabel) {
+      label = `${locLabel} projects`;
+    } else if (typeLabel) {
+      label = `${typeLabel} projects`;
     }
+    
     countText.textContent = `Showing ${filtered.length} ${label}`;
 
     // Build cards
@@ -103,23 +122,35 @@
   }
 
   /* ── FILTERS ───────────────────────────── */
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      activeLocation = btn.dataset.filter;
-      renderProjects();
-    });
-  });
+  function initFilters() {
+    // Location filters (first bar)
+    const locationBar = document.querySelector('.pj-filters-inner:not(.pj-type-filters)');
+    if (locationBar) {
+      locationBar.addEventListener('click', (e) => {
+        const btn = e.target.closest('.pj-filter-btn');
+        if (!btn) return;
 
-  typeBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      typeBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      activeType = btn.dataset.type;
-      renderProjects();
-    });
-  });
+        locationBar.querySelectorAll('.pj-filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeLocation = btn.dataset.filter;
+        renderProjects();
+      });
+    }
+
+    // Type filters (second bar)
+    const typeBar = document.querySelector('.pj-type-filters');
+    if (typeBar) {
+      typeBar.addEventListener('click', (e) => {
+        const btn = e.target.closest('.pj-type-btn');
+        if (!btn) return;
+
+        typeBar.querySelectorAll('.pj-type-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeType = btn.dataset.type;
+        renderProjects();
+      });
+    }
+  }
 
   /* ── HELPERS ───────────────────────────── */
   function escHtml(s) {
@@ -132,6 +163,4 @@
     return (s || '').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
   }
 
-  /* ── INIT ──────────────────────────────── */
-  loadProjects();
 })();

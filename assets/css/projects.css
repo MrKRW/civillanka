@@ -91,7 +91,7 @@
 
 /* ── COUNT BAR ──────────────────────────── */
 .pj-count-bar {
-  display: none; /* Hidden to match clean reference layout */
+  display: block; /* Show to provide filtering feedback */
   background: var(--white);
   padding: 20px 0 10px;
 }
