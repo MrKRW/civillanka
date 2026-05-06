@@ -56,6 +56,39 @@
   padding: 4px 16px;
 }
 
+/* ── TYPE FILTERS ───────────────────────── */
+.pj-type-filters {
+  padding-top: 0 !important;
+  padding-bottom: 40px;
+}
+
+.pj-type-btn {
+  font-family: var(--font-h);
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: lowercase;
+  color: var(--black);
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 4px 12px;
+  cursor: pointer;
+  transition: all 0.3s var(--ease);
+  white-space: nowrap;
+}
+
+.pj-type-btn:hover {
+  opacity: 0.7;
+}
+
+.pj-type-btn.active {
+  color: var(--white);
+  background: var(--black);
+  border-color: var(--black);
+  padding: 4px 16px;
+}
+
 /* ── COUNT BAR ──────────────────────────── */
 .pj-count-bar {
   display: none; /* Hidden to match clean reference layout */

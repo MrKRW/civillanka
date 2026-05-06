@@ -10,9 +10,11 @@
   const emptyState = document.getElementById('pj-empty');
   const countText = document.getElementById('pj-count-text');
   const filterBtns = document.querySelectorAll('.pj-filter-btn');
+  const typeBtns = document.querySelectorAll('.pj-type-btn');
 
   let allProjects = [];
-  let activeFilter = 'all';
+  let activeLocation = 'all';
+  let activeType = 'all';
 
   /* ── LOAD ──────────────────────────────── */
   async function loadProjects() {
@@ -30,17 +32,17 @@
 
   /* ── RENDER ────────────────────────────── */
   function renderProjects() {
-    const filtered = activeFilter === 'all'
-      ? allProjects
-      : allProjects.filter(p => p.category === activeFilter);
+    const filtered = allProjects.filter(p => {
+      const matchLocation = activeLocation === 'all' || p.category === activeLocation;
+      const matchType = activeType === 'all' || (p.service_type && p.service_type.toLowerCase().includes(activeType.toLowerCase()));
+      return matchLocation && matchType;
+    });
 
     if (filtered.length === 0) {
       grid.innerHTML = '';
       grid.parentElement.style.display = 'none';
       emptyState.style.display = 'block';
-      countText.textContent = activeFilter === 'all'
-        ? 'No projects yet'
-        : `No ${activeFilter} projects found`;
+      countText.textContent = 'No matching projects found';
       return;
     }
 
@@ -48,7 +50,14 @@
     emptyState.style.display = 'none';
 
     // Count text
-    const label = activeFilter === 'all' ? 'projects' : activeFilter + ' projects';
+    let label = 'projects';
+    if (activeLocation !== 'all' && activeType !== 'all') {
+      label = `${activeLocation} ${activeType} projects`;
+    } else if (activeLocation !== 'all') {
+      label = `${activeLocation} projects`;
+    } else if (activeType !== 'all') {
+      label = `${activeType} projects`;
+    }
     countText.textContent = `Showing ${filtered.length} ${label}`;
 
     // Build cards
@@ -98,7 +107,16 @@
     btn.addEventListener('click', () => {
       filterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      activeFilter = btn.dataset.filter;
+      activeLocation = btn.dataset.filter;
+      renderProjects();
+    });
+  });
+
+  typeBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      typeBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeType = btn.dataset.type;
       renderProjects();
     });
   });
