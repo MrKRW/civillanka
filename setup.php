@@ -1,7 +1,7 @@
 <?php
 /**
  * CivilLanka – Database Setup Script
- * Run this once via browser: http://localhost/civillanka/setup.php
+ * Run this once via browser: http://localhost/civilweb/setup.php
  * It creates the database, tables, and default admin user.
  * DELETE THIS FILE after setup is complete.
  */
@@ -22,11 +22,11 @@ try {
     ]);
 
     // Create database
-    $pdo->exec("CREATE DATABASE IF NOT EXISTS `civillanka_db` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci");
-    echo "✓ Database 'civillanka_db' created\n";
+    $pdo->exec("CREATE DATABASE IF NOT EXISTS `civilweb_db` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci");
+    echo "✓ Database 'civilweb_db' created\n";
 
     // Use database
-    $pdo->exec("USE `civillanka_db`");
+    $pdo->exec("USE `civilweb_db`");
 
     // Create projects table
     $pdo->exec("
@@ -83,7 +83,7 @@ try {
     echo "\n══════════════════════════════════════════\n";
     echo "  ✅ SETUP COMPLETE!\n";
     echo "══════════════════════════════════════════\n\n";
-    echo "  Admin Panel: <a href='/civillanka/admin/' style='color:#0ff'>http://localhost/civillanka/admin/</a>\n";
+    echo "  Admin Panel: <a href='/civilweb/admin/' style='color:#0ff'>http://localhost/civilweb/admin/</a>\n";
     echo "  Username:    admin\n";
     echo "  Password:    admin123\n\n";
     echo "  ⚠️  DELETE this setup.php file after use!\n";

@@ -1,3 +1,3 @@
 <?php
-header('Location: /civillanka/index.html', true, 301);
+header('Location: /civilweb/index.html', true, 301);
 exit;
